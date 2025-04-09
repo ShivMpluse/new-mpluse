@@ -5,7 +5,7 @@ const Footer = () => {
         <section className='w-full z-50 border bg-black text-white'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 p-8">
                 {data.map((section) => (
-                    <div key={section.id} className='border p-2 flex flex-col justify-center '>
+                    <div key={section.id} className=' p-2 flex flex-col justify-center '>
                         {section.image && (
                             <div className="img mb-2 flex flex-col justify-center items-center">
                                 <img src={section.image} alt={section.name} className='h-10 w-33 object-contain' />

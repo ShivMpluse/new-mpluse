@@ -44,4 +44,4 @@ const Howwork = () => {
     )
 }
 
-export default Howwork
+export default Howwork;

@@ -1,5 +1,6 @@
 import debit from '../../../public/image/set3.png'
 import Button from '../Button'
+// import iserveU from '../../../public/image/iserve.PNG'
 
 const HeroSection = () => {
     return (
@@ -10,7 +11,7 @@ const HeroSection = () => {
                     <h2 className=' text-black  md:text-4xl font-[500] mt-6 leading-tight'>
                     Empowering Businesses with Reliable & Future-Ready Payment Solutions <span className='text-[#14fd2b]'>FLEXIBILITY</span>
                     </h2>
-                    <p className='text-sm mt-4 max-w-md text-black font-[500] font-sans'>
+                    <p className='text-sm mt-4 max-w-md font-sans font-[500] text-[#575656]'>
                         No-fee checking account with cash back rewards. Enjoy fee-free banking and earn cash back on your everyday purchases.
                     </p>
                     <Button text='Open Account' className='px-4 py-2 bg-[#00b512] text-white font-semibold'/>
@@ -24,8 +25,8 @@ const HeroSection = () => {
                     <img src={debit} alt="Debit Card" className=' bottom-[-30px] right-8 md:right-16 scale-75 md:scale-90 z-20' />
                 </div>
             </div>
-            <div className="p-4 max-w-[12400px] w-full text-4xl text-gray-400 flex justify-center items-center gap-10 font-black  mt-10 mx-auto overflow-hidden">
-                <marquee behavior="altarnet" direction="left" className="flex gap-10">
+            <div className="shadow-md my-10 p-4 max-w-[1400px] w-full text-4xl text-gray-400 flex justify-center items-center gap-10 font-black  mt-10 mx-auto overflow-hidden">
+                <marquee behavior="alterant" direction="left" className="flex gap-10">
                     <span>Mpluse &nbsp; </span>
                     <span>Mpluse &nbsp; </span>
                     <span>Mpluse &nbsp; </span>
@@ -34,7 +35,6 @@ const HeroSection = () => {
                     <span>Mpluse &nbsp; </span>
                     <span>Mpluse &nbsp; </span>
                 </marquee>
-                
             </div>
         </section>
     )

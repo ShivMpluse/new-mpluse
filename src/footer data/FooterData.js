@@ -5,7 +5,15 @@ const data = [
         id: "1",
         name: "Mpluse",
         image: "/image/logo-full2.png",
-        description: "kjhfg  sdfsdf jk"
+        description: `Mpluse Fintech Private Limited is a technology 
+                      platform that provides API-based financial infrastructure and 
+                      white-labeled solutions in partnership with licensed banks, NBFCs, 
+                      and payment aggregators. We are not a bank, NBFC, or payment 
+                      aggregator and do not hold or claim to hold any license from 
+                      RBI, NPCI, or any regulatory authority. All financial services 
+                      and settlements enabled through our platform are operated solely 
+                      by our regulated partners. Mpluse does not hold end-user funds and 
+                      acts strictly as a technology facilitator.`
     },
     {
         id: "2",

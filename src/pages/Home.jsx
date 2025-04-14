@@ -12,15 +12,11 @@ import Developer from '../components/Home/Developer'
 const Home = () => {
     return (
         <section className='bg-[#fff] text-black'>
-            <Header />
             <HeroSection />
             <Howwork />
             <WhyMpluse />
             <Works />
             <Developer />
-            {/* <Solution /> */}
-            {/* <Ready /> */}
-            <Footer />
         </section>
     )
 }

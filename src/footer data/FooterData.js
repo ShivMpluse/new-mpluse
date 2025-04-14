@@ -26,17 +26,17 @@ const data = [
             "UPI solution"
         ]
     },
-    {
-        id: "3",
-        title: "company",
-        features: [
-            "About us",
-            "careers",
-            "press",
-            "blog",
-            "contact"
-        ]
-    },
+    // {
+    //     id: "3",
+    //     title: "company",
+    //     features: [
+    //         "About us",
+    //         "careers",
+    //         "press",
+    //         "blog",
+    //         "contact"
+    //     ]
+    // },
     {
         id: "4",
         title: "resources",
@@ -48,16 +48,11 @@ const data = [
             "developers"
         ]
     },
-    {
-        id: "5",
-        title: "legal",
-        features: [
-            "terms of services",
-            "privacy policy",
-            "refund policy",
-            "compliance"
-        ]
-    }
+    // {
+    //     id: "5",
+    //     title: "legal",
+    //     input: <input type='mail' className="border border-white bg-amber-300"/>
+    // }
 ];
 
     export default data;

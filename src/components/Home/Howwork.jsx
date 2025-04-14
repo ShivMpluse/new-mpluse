@@ -1,8 +1,15 @@
 import { ImLoop } from "react-icons/im";
 import { MdOutlineUpgrade } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Howwork = () => {
+
+    const ref = useRef(null)
 
     const data = [
         {
@@ -25,8 +32,26 @@ const Howwork = () => {
         },
     ]
 
+    useEffect(() => {
+        const el = ref.current
+        gsap.fromTo(el,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                }
+            }
+        )
+    }, [])
+
+
     return (
-        <section className='max-w-[1200px] mx-auto py-10'>
+        <section className='max-w-[1200px] mx-auto py-10' ref={ref}>
             <h1 className="text-4xl capitalize py-10">why choose mpluse</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {

@@ -1,10 +1,36 @@
 import React from 'react'
-import Button from '../Button'
+import Button from '../UI/Button'
 import man from '../../../public/image/human.png'
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Developer = () => {
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+        const el = ref.current
+        gsap.fromTo(el,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                }
+            }
+        )
+    }, [])
+
+
     return (
-        <section className='px-4 max-w-[1200px] mx-auto  my-18'>
+        <section className='px-4 max-w-[1200px] mx-auto my-18' ref={ref}>
             <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-8 ">
                 <div className="flex flex-col items-start px-10 gap-6">
                     <h1 className="text-4xl font-semibold my-10 capitalize" >developer friendly API's </h1>

@@ -1,6 +1,31 @@
 import  card from '../../../public/image/Dashboard-card.svg'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const WhyMpluse = () => {
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+        const el = ref.current
+        gsap.fromTo(el,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                }
+            }
+        )
+    }, [])
+
 
     // const data = [
     //     {
@@ -24,7 +49,7 @@ const WhyMpluse = () => {
     // ]
 
     return (
-        <section className='max-w-[1200px] mx-auto p-4 '>
+        <section className='max-w-[1200px] mx-auto p-4' ref={ref}>
             {/* <h1 className="text-4xl font-bold my-10 ">Why Mpluse</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 mx-auto ">
                 <div className="flex flex-col gap-6 justify-center mx-auto ">

@@ -2,7 +2,6 @@ import  card from '../../../public/image/Dashboard-card.svg'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { image, li } from 'framer-motion/m'
 
 gsap.registerPlugin(ScrollTrigger)
 

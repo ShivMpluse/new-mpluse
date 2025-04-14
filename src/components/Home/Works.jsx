@@ -30,6 +30,24 @@ const Works = () => {
             description: "Start accepting payments globally with secure API integration.",
             icon: <IoSettings size={32} className="text-blue-500" />
         },
+        {
+            id: 4,
+            title: 'integrate',
+            description: "Seamless API integration for smooth and scalable connectivity.",
+            icon: <ImLoop size={32} className="text-blue-500" />
+        },
+        {
+            id: 5,
+            title: 'go live',
+            description: "Launch your service live with speed and confidence.",
+            icon: <MdOutlineUpgrade size={32} className="text-blue-500" />
+        },
+        {
+            id: 6,
+            title: 'start acepring',
+            description: "Start accepting payments globally with secure API integration.",
+            icon: <IoSettings size={32} className="text-blue-500" />
+        }
     ]
 
     useEffect(() => {

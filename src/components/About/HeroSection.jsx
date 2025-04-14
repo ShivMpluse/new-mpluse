@@ -14,7 +14,7 @@ const HeroSection = () => {
                     </h2>
                     {/* <span className='text-[#14fd2b]'>FLEXIBILITY</span> */}
                     <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black'>
-                        Welcome to our world — where innovation meets purpose. We build experiences that matter.
+                    Welcome to Mpluse — where innovation meets purpose. We are committed to building meaningful fintech experiences that simplify complexity, empower businesses, and drive growth. With a focus on technology, trust, and impact, we deliver secure, scalable solutions that truly matter in today’s fast-evolving digital world.
                     </p>
                     <Button text='Open Account' className='px-4 py-2 bg-[#b5001e] text-white font-semibold'/>
                 

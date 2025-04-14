@@ -1,9 +1,9 @@
-import mission from '../../../public/image/mission.png'
+import mission from '../../../public/image/ourMission.png'
 
 const OurMission = () => {
     return (
-        <section className='flex flex-col items-center px-4 max-w-[1200px] mx-auto  mt-18  mb-4'>
-            <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+        <section className='flex flex-col items-center px-4 max-w-[1200px] mx-auto mt-18 py- mb-4 py-10'>
+            <h2 className="text-3xl font-semibold mb-18">Our Mission</h2>
             <section className=" mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className=''>
                     

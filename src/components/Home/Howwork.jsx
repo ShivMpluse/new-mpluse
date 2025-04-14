@@ -51,7 +51,7 @@ const Howwork = () => {
 
 
     return (
-        <section className='max-w-[1200px] mx-auto py-10' ref={ref}>
+        <section className='max-w-[1200px] mx-auto py-10 flex flex-col text-center' ref={ref}>
             <h1 className="text-4xl capitalize py-10">why choose mpluse</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {

@@ -51,8 +51,8 @@ const Works = () => {
 
 
     return (
-        <section className='max-w-[1200px] mx-auto py-10'>
-            <h1 className="text-4xl capitalize py-10">how it works</h1>
+        <section className='max-w-[1200px] mx-auto py-6'>
+            <h1 className="text-4xl capitalize py-10 text-center">how it works</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                     data.map((item) => (

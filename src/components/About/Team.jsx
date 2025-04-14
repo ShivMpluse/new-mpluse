@@ -1,4 +1,4 @@
-import { image, li } from 'framer-motion/m'
+
 import React from 'react'
 
 const Team = () => {

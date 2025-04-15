@@ -20,7 +20,7 @@ function Header() {
     ];
 
     return (
-        <section className='fixed bg-transparent backdrop-blur-3xl top-0 left-0 w-full z-50'>
+        <section className='fixed bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50'>
             <header className="flex justify-between items-center px-8 py-4 w-full mx-auto relative max-w-[1200px]">
                 {/* Logo */}
                 <div>

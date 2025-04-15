@@ -7,6 +7,7 @@ import Howwork from '../components/Home/Howwork'
 import Footer from '../components/layout/Footer'
 import Works from '../components/Home/Works'
 import Developer from '../components/Home/Developer'
+import OurWork from '../components/Home/OurWork'
 // import Ready from '../components/Home/Ready'
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <section className='bg-[#fff] text-black'>
             <HeroSection />
             <Howwork />
+            <OurWork />
             <WhyMpluse />
             <Works />
             <Developer />

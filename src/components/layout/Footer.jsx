@@ -21,7 +21,7 @@ const Footer = () => {
                         <div key={section.id} className='p-2 flex flex-col'>
                             {section.image && (
                                 <div className="img mb-2 flex flex-col justify-center ">
-                                    <img src={section.image} alt={section.name} className='h-10 w-33 object-contain' />
+                                    <img src={section.image} alt={section.name} className='h-18 w-33 object-contain' />
                                     <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{section.description}</p>
                                     <div className="flex gap-4 text-3xl py-4 justify-evenly">
                                         <IoLogoInstagram className='text-red-500' />
@@ -34,7 +34,7 @@ const Footer = () => {
                             )}
                             {section.title && (
                                 <>
-                                    <h3 className="font-bold text-lg mb-2 px-4 capitalize">{section.title}</h3>
+                                    <h3 className="font-bold text-2xl mb-2 px-4 capitalize">{section.title}</h3>
                                     <ul className="space-y-1 ">
                                         {section.features?.map((item, idx) => (
                                             <li key={idx} className="hover:text-gray-400 p-2 text-gray-100 cursor-pointer px-4 mx-auto capitalize">
@@ -49,7 +49,7 @@ const Footer = () => {
 
                     {/* 👇 Extra Column for Newsletter */}
                     <div className="p-2 flex flex-col space-y-3">
-                        <h3 className="font-bold text-lg mb-2">Stay Updated</h3>
+                        <h2 className="text-2xl font-bold mb-2 capitalize">Stay Updated</h2>
                         <p className='text-sm text-gray-400'>
                             Subscribe to our newsletter to get latest fintech updates.
                         </p>
@@ -59,7 +59,7 @@ const Footer = () => {
                                 placeholder="Enter your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="p-2 text-white rounded-md w-full outline-none focus:ring-2 focus:ring-blue-500 border border-white"
+                                className="p-2 text-white rounded-md w-full outline-none focus:ring-2 focus:ring-red-300 border border-white"
                             />
                             <button
                                 onClick={handleSubscribe}

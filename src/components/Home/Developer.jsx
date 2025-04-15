@@ -30,7 +30,7 @@ const Developer = () => {
 
 
     return (
-        <section className=' px-4 max-w-[1200px] mx-auto my-18 py-6' ref={ref}>
+        <section className=' px-4 max-w-[1200px] mx-auto  py-6' ref={ref}>
             <div className="flex text-center justify-center text-4xl font-semibold my-2 capitalize mx-auto py-4">
                 <h1 className="" >developer friendly API's </h1>
             </div>

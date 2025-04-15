@@ -15,12 +15,12 @@ const Footer = () => {
 
     return (
         <section className='w-full z-50 '>
-            <footer className='bg-[#101218] text-white'>
+            <footer className='bg-[#1f2426] text-white'>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8 max-w-[1400px] mx-auto">
                     {data.map((section) => (
                         <div key={section.id} className='p-2 flex flex-col'>
                             {section.image && (
-                                <div className="img mb-2 flex flex-col justify-center">
+                                <div className="img mb-2 flex flex-col justify-center ">
                                     <img src={section.image} alt={section.name} className='h-10 w-33 object-contain' />
                                     <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{section.description}</p>
                                     <div className="flex gap-4 text-3xl py-4 justify-evenly">
@@ -34,11 +34,11 @@ const Footer = () => {
                             )}
                             {section.title && (
                                 <>
-                                    <h3 className="font-bold text-lg mb-2 px-4">{section.title}</h3>
-                                    <ul className="space-y-1">
+                                    <h3 className="font-bold text-lg mb-2 px-4 capitalize">{section.title}</h3>
+                                    <ul className="space-y-1 ">
                                         {section.features?.map((item, idx) => (
-                                            <li key={idx} className="hover:text-gray-400 text-gray-100 cursor-pointer px-4 mx-auto">
-                                                {item}
+                                            <li key={idx} className="hover:text-gray-400 p-2 text-gray-100 cursor-pointer px-4 mx-auto capitalize">
+                                                <span>{item}</span>
                                             </li>
                                         ))}
                                     </ul>

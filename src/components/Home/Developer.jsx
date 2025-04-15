@@ -34,7 +34,7 @@ const Developer = () => {
             <div className="flex text-center justify-center text-4xl font-semibold my-2 capitalize mx-auto py-4">
                 <h1 className="" >developer friendly API's </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-8 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-8 bg-white py-10">
                 <div className="flex flex-col items-start px-10 gap-10 ">
                     
                     <p className='text-lg  max-w-md font-sans font-[400] text-black'>

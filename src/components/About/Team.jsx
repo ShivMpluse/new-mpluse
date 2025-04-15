@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../index.css'
 
 const Team = () => {
 
@@ -51,16 +52,15 @@ const Team = () => {
                     <li key={elem.id} 
                         className='flex flex-col justify-center border border-[#c9c7c7] 
                                     items-center gap-6 p-6 bg-gradient-to-b to-10% 
-                                    from-red-400 via-40% from-10% via-red-200 
-                                    to-blue-500 shadow-lg rounded-xl transform hover:scale-105 
+                                    shadow-lg rounded-xl transform hover:scale-105 
                                     transition-all'
                         >
                         <div className="flex h-32 w-32  bg-white rounded-full overflow-hidden mb-4">
                             <img src={elem.image} alt={elem.name} className='h-full w-full object-cover' />
                         </div>
                         <div className='text-center'>
-                            <h3 className="font-semibold text-2xl text-white capitalize">mr. {elem.name}</h3>
-                            <p className="text-lg text-white">{elem.designation}</p>
+                            <h3 className="font-semibold text-2xl text-black capitalize">mr. {elem.name}</h3>
+                            <p className="text-lg text-black">{elem.designation}</p>
                         </div>
                         
                     </li>
@@ -71,3 +71,5 @@ const Team = () => {
 }
 
 export default Team
+//  from-red-400 via-40% from-10% via-red-200 
+//                                     to-blue-500

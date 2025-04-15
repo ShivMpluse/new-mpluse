@@ -70,13 +70,13 @@ const Howwork = () => {
 
     return (
         <section className='max-w-[1200px] mx-auto py-10 flex flex-col text-center' ref={ref}>
-            <h1 className="text-4xl capitalize py-10">why choose mpluse</h1>
+            <h1 className="text-4xl capitalize py-10 font-semibold">why choose mpluse</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                     data.map((item) => (
                         <li key={item.id}  className="border border-[#e7e7e7] p-8 shadow-lg bg-white text-black rounded-lg">
                             <div className="flex flex-col gap-4 items-center">
-                                <span className="p-4 border border-[#dcd6d6] shadow-md rounded-full animate-pulse">{item.icon}</span>
+                                <span className="p-4 border border-[#dcd6d6] shadow-md rounded-full animate-pulse capitalize">{item.icon}</span>
                                 <h2 className="text-3xl font-semibold capitalize">{item.title}</h2>
                                 <p className="text-lg text-center">{item.description}</p>
                             </div>

@@ -70,14 +70,14 @@ const Works = () => {
 
     return (
         <section className='max-w-[1200px] mx-auto py-6'>
-            <h1 className="text-4xl capitalize py-10 text-center">how it works</h1>
+            <h1 className="text-4xl capitalize py-10 text-center font-semibold">how it works</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                     data.map((item) => (
                         <li key={item.id}  className="border border-[#e7e7e7] p-8 shadow-lg bg-white text-black rounded-lg">
                             <div className="flex flex-col gap-4 items-center">
                                 <span className="p-4 border border-[#dcd6d6] shadow-md rounded-full">{item.icon}</span>
-                                <h2 className="text-2xl">{item.title}</h2>
+                                <h2 className="text-2xl capitalize">{item.title}</h2>
                                 <p className="text-lg text-center">{item.description}</p>
                             </div>
                         </li>

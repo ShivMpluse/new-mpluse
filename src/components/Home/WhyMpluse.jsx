@@ -49,7 +49,7 @@ const WhyMpluse = () => {
     return (
         <section className='max-w-[1200px] mx-auto p-4' ref={ref}>
             {/* <h1 className="text-4xl font-bold my-10 ">Why Mpluse</h1> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-2 mx-auto  bg-white">
                 <div className="flex flex-col gap-6 justify-center mx-auto ">
                     <div className="flex flex-col gap-3 mx-auto mx-w-[450px] 8 justify-center items-center">
                         <h1 className="text-4xl font-semibold my-10 capitalize text-center" >solution for every Business </h1>

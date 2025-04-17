@@ -1,7 +1,10 @@
 import React from 'react'
 import '../../index.css'
 
-const Team = () => {
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+    
 
     const team = [
         {
@@ -42,8 +45,29 @@ const Team = () => {
         }
     ]
 
+const Team = () => {
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+        const el = ref.current
+        gsap.fromTo(el,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                }
+            }
+        )
+    }, [])
+
     return (
-        <section className='px-4 max-w-[1200px] mx-auto py-10 mt-18'>
+        <section className='px-4 max-w-[1200px] mx-auto py-10 mt-18' ref={ref}>
             <div className="flex justify-center">
                 <h2 className='text-3xl font-semibold mb-18 capitalize'>Meet Our Team</h2>
             </div>
@@ -56,7 +80,7 @@ const Team = () => {
                                     transition-all'
                         >
                         <div className="flex h-32 w-32  bg-white rounded-full overflow-hidden mb-4">
-                            <img src={elem.image} alt={elem.name} className='h-full w-full object-cover' />
+                            <img src={elem.image} alt={elem.name} className='h-full w-full object-cover bg-[#eaf0f9d6]' />
                         </div>
                         <div className='text-center'>
                             <h3 className="font-semibold text-2xl text-black capitalize">mr. {elem.name}</h3>

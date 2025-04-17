@@ -4,6 +4,7 @@ import AppLayout from "./components/layout/AppLayout";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ContactUS from "./pages/ContactUS";
+import TermsAndConditions from "./footer data/TermsAndConditions";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         {
           path: '/about',
           element: <About />
+        },
+        {
+            path: "/terms-and-conditions",
+            element: <TermsAndConditions />,
         },
         {
           path: '/contact',
@@ -34,7 +39,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   )
 }
 

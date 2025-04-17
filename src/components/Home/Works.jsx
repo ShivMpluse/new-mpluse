@@ -1,7 +1,8 @@
 import { ImLoop } from "react-icons/im";
 import { MdOutlineUpgrade } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
-import React, { useEffect, useRef } from 'react'
+
+import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -69,12 +70,12 @@ const Works = () => {
 
 
     return (
-        <section className='max-w-[1200px] mx-auto py-6'>
+        <section className='max-w-[1200px] mx-auto py-6' ref={ref}>
             <h1 className="text-4xl capitalize py-10 text-center font-semibold">how it works</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                     data.map((item) => (
-                        <li key={item.id}  className="border border-[#e7e7e7] p-8 shadow-lg bg-white text-black rounded-lg">
+                        <li key={item.id}  className="border border-[#e7e7e7] p-8 shadow-lg bg-white text-black rounded-xl transform hover:scale-105 transition-all">
                             <div className="flex flex-col gap-4 items-center">
                                 <span className="p-4 border border-[#dcd6d6] shadow-md rounded-full">{item.icon}</span>
                                 <h2 className="text-2xl capitalize">{item.title}</h2>

@@ -56,7 +56,7 @@ const WhyMpluse = () => {
                         <ul className="flex flex-wrap gap-8 justify-center items-center">
                             {
                                 images.map((elem)=>(
-                                    <li key={elem.id} className='p-0 h-28 w-28 flex-wrap'>
+                                    <li key={elem.id} className='p-0 h-28 w-28 flex-wrap rounded-xl transform hover:scale-105 transition-all'>
                                         <img src={elem.image} alt="logo" className='h-full w-full scale-150' />
                                     </li>
                                 ))

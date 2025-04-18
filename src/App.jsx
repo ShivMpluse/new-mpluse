@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import ContactUS from "./pages/ContactUS";
 import TermsAndConditions from "./footer data/TermsAndConditions";
 import TechnologyInfo from "./components/TechnologyInfo";
+import RefundPolicyPage from "./components/RefundPolicyPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
           path: '/about',
           element: <About />
         },
+
         {
             path: "/terms-and-conditions",
             element: <TermsAndConditions />,
@@ -28,6 +30,12 @@ const router = createBrowserRouter([
           path: '/privacy-policy',
           element: <TechnologyInfo />
         },
+        {
+          path: '/refund-policy',
+          element: <RefundPolicyPage />
+        },
+
+
         {
           path: '/contact',
           element: <Contact />

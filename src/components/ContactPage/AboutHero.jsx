@@ -5,32 +5,32 @@ import About from '../../pages/About'
 
 const AboutHero = () => {
 
-    const images = [
-        {
-            id: "1",
-            image: "/image/hdfc.png"
-        },
-        {
-            id: "2",
-            image: "/image/icici.png"
-        },
-        {
-            id: "3",
-            image: "/image/axis.png"
-        },
-        {
-            id: "4",
-            image: "/image/union.png"
-        },
-        {
-            id: "5",
-            image: "/image/kotak.png"
-        },
-        {
-            id: "6",
-            image: "/image/panjab.png"
-        }
-    ]
+    // const images = [
+    //     {
+    //         id: "1",
+    //         image: "/image/hdfc.png"
+    //     },
+    //     {
+    //         id: "2",
+    //         image: "/image/icici.png"
+    //     },
+    //     {
+    //         id: "3",
+    //         image: "/image/axis.png"
+    //     },
+    //     {
+    //         id: "4",
+    //         image: "/image/union.png"
+    //     },
+    //     {
+    //         id: "5",
+    //         image: "/image/kotak.png"
+    //     },
+    //     {
+    //         id: "6",
+    //         image: "/image/panjab.png"
+    //     }
+    // ]
 
     return (
         

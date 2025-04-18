@@ -41,27 +41,27 @@ const Footer = () => {
                         </div>
                     </div> 
                     
-                    <div className='border-t-3 md:border-t-0 py-4 md:border-l-3 border-[#777676] pl-4'>
+                    <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
                         <ul className='flex flex-col gap-2'>
                             <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><MdOutlineMail className='text-red-400 text-xl capitalize' /> Email : </span> support@mpluase.in</li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
+                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdOutlineMail className='text-red-400 text-2xl capitalize' /> Email : </span> support@mpluase.in</li>
+                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
+                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
+                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
                             {/* <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span></li> */}
                         </ul>
                     </div>
-                    <div className='border-t-3 md:border-t-0 py-4 md:border-l-3 border-[#777676] pl-4'>
+                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4'>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
-                            <li className='text-sm text-[#CDCDCD] mb-1 hover:text-white'><NavLink to='/About'>About</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1'><NavLink to='/contact'>Contact</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1'>Subscription</li>
-                            <li className='text-sm text-[#CDCDCD] mb-1'>Invoices</li>
-                            <li className='text-sm text-[#CDCDCD] mb-1'>UPI Solution</li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/contact'>Contact</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/refund-policy'>refund policy</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'>Invoices</li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'>UPI Solution</li>
                         </ul>
                     </div>
-                    <div className='border-t-3 md:border-t-0 py-4 md:border-l-3 border-[#777676] pl-4'>
+                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4'>
                         <div className="p-2 flex flex-col space-y-3 ">
                             <h2 className="text-2xl font-semibold mb-2 capitalize">Stay Updated</h2>
                             <p className='text-sm text-gray-400'>
@@ -69,7 +69,7 @@ const Footer = () => {
                             </p>
                             <label className="text-sm">
                                 <input type="checkbox" required /> I agree to the{" "}
-                                <NavLink to="/terms-and-conditions" target='_blank' className="text-blue-500 underline">
+                                <NavLink to="/terms-and-conditions"  className="text-blue-500 underline">
                                     Terms & Conditions
                                 </NavLink>
                             </label>
@@ -100,8 +100,8 @@ const Footer = () => {
                 <div className="flex items-center py-6 justify-evenly text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
                     <p className="flex">© 2025 Mpluse Fintech. All rights reserved. | Empowering Digital Finance for All</p>
                     <div className='flex '>
-                        <NavLink to="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
-                            Disclaimer |  
+                        <NavLink to="/privacy-policy" className="text-gray-400 hover:text-white text-sm capitalize">
+                            privacy & policy |  
                         </NavLink>
                         <NavLink to="/terms-and-conditions" target='' className="text-gray-400 hover:text-white text-sm"> &nbsp;Terms & Conditions</NavLink>
                     </div>

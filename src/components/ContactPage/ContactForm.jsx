@@ -16,7 +16,7 @@ const ContactForm = () => {
             <div className="grid md:grid-cols-2 gap-10">
                 {/* Contact Form */}
                 <div>
-                <form className="space-y-6 bg-gray-100 p-6 rounded-lg">
+                <form className="space-y-6 bg-white p-6 rounded-lg shadow-lg">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Name</label>
                         <input
@@ -47,7 +47,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Contact Info */}
-                <div className="bg-gray-100 p-6 rounded-lg shadow-lg space-y-4">
+                <div className="bg-white p-6 rounded-lg shadow-lg space-y-4">
                     <h2 className="text-xl font-semibold text-gray-800">Our Office</h2>
                     <p className="text-gray-600">Mpluse Fintech Pvt. Ltd.<br />Lucknow, Uttar Pradesh, India</p>
 

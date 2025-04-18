@@ -6,7 +6,7 @@ body, section{
     background-color: #eaf0f9d6;
 }
 ul li{
-    font-size: medium;
+    /* font-size: medium; */
     font-weight: 400;
     /* background-color: #fff; */
 }

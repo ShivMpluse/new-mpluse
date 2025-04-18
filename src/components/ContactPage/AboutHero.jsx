@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import debit from '../../../public/image/mpluse-card.png'
 import Button from '../UI/Button'
+import About from '../../pages/About'
 
-const HeroSection = () => {
+const AboutHero = () => {
 
     const images = [
         {
@@ -51,24 +52,11 @@ const HeroSection = () => {
                     <img src={debit} alt="Debit Card" className=' bottom-[-30px] right-8 md:right-16 scale-75 md:scale-90 z-20' />
                 </div>
             </div>
-            <div className="my-10 p-4 max-w-[1200px] w-full text-4xl text-gray-400 flex justify-center items-center gap-10 font-black  mt-10 mx-auto overflow-hidden">
-                <marquee behavior="alterant" direction="left" className="flex gap-10">
-                    <ul className='flex gap-10'>
-                        {
-                            images.map((elem) => (
-                                <li key={elem.id} className='shadow-md  h-16 w-74 bg-white'>
-                                    <img src={elem.image} alt="company" className='h-full w-full'/>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </marquee>
-            </div>
         </Section>
     )
 }
 
-export default HeroSection
+export default AboutHero
 
 
 const Section = styled.div `

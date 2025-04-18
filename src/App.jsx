@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ContactUS from "./pages/ContactUS";
 import TermsAndConditions from "./footer data/TermsAndConditions";
+import TechnologyInfo from "./components/TechnologyInfo";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         {
             path: "/terms-and-conditions",
             element: <TermsAndConditions />,
+        },
+        {
+          path: '/privacy-policy',
+          element: <TechnologyInfo />
         },
         {
           path: '/contact',

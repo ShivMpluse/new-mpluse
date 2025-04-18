@@ -5,6 +5,7 @@ import { IoSettings } from "react-icons/io5";
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// import styled from "styled-components";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -70,7 +71,7 @@ const Howwork = () => {
 
 
     return (
-        <section className='max-w-[1200px] mx-auto py-10 flex flex-col text-center' ref={ref}>
+        <section className=' max-w-[1200px] mx-auto py-10 flex flex-col text-center' ref={ref}>
             <h1 className="text-4xl capitalize py-10 font-semibold">why choose mpluse</h1>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
@@ -90,3 +91,7 @@ const Howwork = () => {
 }
 
 export default Howwork;
+
+// const Li = styled.div `
+//     box-shadow: 6px 8px 10px 10px rgba(0, 0, 0, 0.1);
+// `

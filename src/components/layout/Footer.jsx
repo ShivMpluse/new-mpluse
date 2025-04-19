@@ -57,8 +57,8 @@ const Footer = () => {
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/contact'>Contact</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/refund-policy'>refund policy</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'>Invoices</li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'>UPI Solution</li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/terms-and-conditions"  className="capitalized">term $ conditions</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li>
                         </ul>
                     </div>
                     <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4'>
@@ -69,9 +69,9 @@ const Footer = () => {
                             </p>
                             <label className="text-sm">
                                 <input type="checkbox" required /> I agree to the{" "}
-                                <NavLink to="/terms-and-conditions"  className="text-blue-500 underline">
+                                <span  className="capitalize">
                                     Terms & Conditions
-                                </NavLink>
+                                </span>
                             </label>
                         </div>
 

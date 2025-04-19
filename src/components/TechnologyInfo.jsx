@@ -7,7 +7,7 @@ function TechnologyInfo() {
         <Section className=" px-4 max-w-[1200px] mx-auto mt-18 py-10 mb-10">
         <ul>
             {techData.map((item) => (
-                <li key={item.id} className=" flex flex-col justify-center items-start p-4 mb-4 bg-gray-50 rounded-lg shadow-md">
+                <li key={item.id} className="mb-6 border-b-2 border-gray-300 p-4">
                     <h2 className="text-xl font-bold mb-2">{item.title}</h2>
                     {Array.isArray(item.content) ? (
                         <ul className="list-disc list-inside space-y-1">

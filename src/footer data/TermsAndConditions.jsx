@@ -5,14 +5,14 @@ import termsData from "./term&cond";
 const TermsAndConditions = () => {
     return (
         <section className="p-6 my-18 h-scree mx-auto text-gray-800 max-w-[1200px]">
-            <div className=" mx-auto px-4 py-8 ">
+            <ul className=" mx-auto px-4 py-8 ">
                 {termsData.map((section, index) => (
-                    <div key={index} className=" flex flex-col justify-center items-start p-4 mb-4 bg-gray-50 rounded-lg shadow-md">
+                    <li key={index} className=" flex flex-col justify-center items-start  mb-4">
                         <h2 className="text-xl font-semibold mt-6 mb-2">{section.title}</h2>
                         <p className="mb-4">{section.content}</p>
-                    </div>
+                    </li>
                 ))}
-                </div>
+                </ul>
         </section>
     );
 };

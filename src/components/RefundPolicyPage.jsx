@@ -57,17 +57,17 @@ function RefundPolicyPage() {
         {
         id: 11,
         title: "11. Contact Information",
-        content: "📧 support@mpluse.in | 📨 legal@mpluse.in | ☎️ 011-69046382"
+        content:[ "📧 support@mpluse.in |", "📨 legal@mpluse.in | ", "☎️ 011-69046382"]
         }
     ]
 
 
     return (
-        <div className=" mt-18 max-w-[1200px] mx-auto p-4">
+        <div className=" mt-20 max-w-[1200px] mx-auto p-4">
             <h1 className="text-2xl font-bold mb-6">Refund Policy</h1>
             <ul>
                 {refundPolicy.map(section => (
-                    <li key={section.id} className=" flex flex-col justify-center items-start p-4 mb-4 bg-gray-50 rounded-lg shadow-md">
+                    <li key={section.id} className="mt-10 mb-6">
                         <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
                         <p className="text-gray-700">{section.content}</p>
                     </li>

@@ -97,13 +97,13 @@ const Footer = () => {
                     
                 </div>
 
-                <div className="flex items-center py-6 justify-evenly text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
+                <div className="flex items-center px-10 py-6 justify-between text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
                     <p className="flex">© 2025 Mpluse Fintech. All rights reserved. | Empowering Digital Finance for All</p>
                     <div className='flex '>
-                        <NavLink to="/privacy-policy" className="text-gray-400 hover:text-white text-sm capitalize">
-                            privacy & policy |  
+                        <NavLink to="/disclaimer" className="text-gray-400 hover:text-white text-sm capitalize">
+                            disclaimer   
                         </NavLink>
-                        <NavLink to="/terms-and-conditions" target='' className="text-gray-400 hover:text-white text-sm"> &nbsp;Terms & Conditions</NavLink>
+                        {/* <NavLink to="/terms-and-conditions" target='' className="text-gray-400 hover:text-white text-sm"> &nbsp;Terms & Conditions</NavLink> */}
                     </div>
                     
                 </div>

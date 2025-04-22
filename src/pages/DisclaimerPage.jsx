@@ -3,37 +3,37 @@ import React from "react";
 const disclaimerData = [
     {
         title: "Our Technology Role",
-        icon: "✅",
+        // icon: "✅",
         content:
         "Mpluse is a technology infrastructure provider. We offer APIs, virtual account systems, and white-label panels that help other platforms manage digital financial workflows (like payouts, collections, etc.). We do NOT process or store user money. All transactions are powered by regulated banks and NBFCs we partner with.",
     },
     {
         title: "What We Don’t Do",
-        icon: "❌",
+        // icon: "❌",
         content:
         "Mpluse is not a bank, wallet company, NBFC, or payment gateway. We are not licensed by RBI or NPCI and do not offer regulated services directly. All funds and financial operations are handled by compliant partners.",
     },
     {
         title: "Legal Frameworks Covered",
-        icon: "⚖️",
+        // icon: "⚖️",
         content:
         "IT Act, 2000: Ensures cybersecurity and legal use of software systems.\nDPDP Act, 2023: Data protection law covering user privacy, consent, and security.\nContract Act, 1872: All agreements with users/partners are contractually governed.",
     },
     {
         title: "User & Partner Responsibilities",
-        icon: "🤝",
+        // icon: "🤝",
         content:
         "We provide services only to KYC-verified and contract-bound businesses.\nYou must follow legal rules of your integrated financial partner.\nYou are responsible for customers, operations, and any complaints or disputes.\nYou must use the system only for authorized, legal purposes.",
     },
     {
         title: "Grievance Contact",
-        icon: "📩",
+        // icon: "📩",
         content:
         "Grievance Officer – Mpluse Fintech Pvt. Ltd.\nEmail: support@mpluse.in\nPhone: 011-69046382\nOffice: Lucknow, Uttar Pradesh, India",
     },
     {
         title: "Effective Date & Review",
-        icon: "📅",
+        // icon: "📅",
         content:
         "This disclaimer is version 1.1 and was last reviewed on April 18, 2025. We may update it without prior notice.\nApproved by: Siddharth Maurya, Founder & Director",
     },

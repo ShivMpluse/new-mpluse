@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import Button from '../UI/Button';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 function Header() {
     const [toggle, setToggle] = useState(false);
@@ -40,7 +41,9 @@ function Header() {
                                             : 'hover:text-red-500'
                                     }
                                 >
+                                <motion.div whileHover={{color:'green', scale:1.1}}>
                                     {name}
+                                </motion.div>
                                 </NavLink>
                             </li>
                         ))}
@@ -77,7 +80,7 @@ function Header() {
                                 </li>
                             ))}
                         </ul>
-                        <button className="border p-2 rounded-lg mt-4 w-full">Sign Up</button>
+                        {/* <button className="border p-2 rounded-lg mt-4 w-full">Sign Up</button> */}
                     </div>
                 )}
             </header>

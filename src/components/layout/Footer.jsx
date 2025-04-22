@@ -28,40 +28,50 @@ const Footer = () => {
     return (
         <section className='w-full z-50 '>
             <footer className='bg-[#000000] text-white'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 max-w-[1400px] mx-auto">
-                    <div className="img mb-2 flex flex-col justify-center ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 max-w-[1400px] mx-auto">
+                    <div className="img mb-2 flex flex-col justify-center border p-4">
                         <img src={logo} alt="mpluse" className='h-18 w-33 object-contain' />
                         <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{description}</p>
                         <div className="flex gap-4 text-3xl py-4 justify-evenly">
                             <IoLogoInstagram className='text-red-500' />
                             <IoLogoFacebook className='text-blue-500' />
-                            <IoLogoWhatsapp className='text-green-500' />
+                            <IoLogoWhatsapp className='text-green-500' />    
                             <FaTwitter className='text-blue-500' />
                             <FaLinkedin className='text-blue-500' />
                         </div>
                     </div> 
-                    
-                    <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
+                    {/* <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
                         <ul className='flex flex-col gap-2'>
                             <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>
                             <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdOutlineMail className='text-red-400 text-2xl capitalize' /> Email : </span> support@mpluase.in</li>
                             <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
                             <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
                             <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
-                            {/* <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span></li> */}
                         </ul>
-                    </div>
-                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4'>
+                    </div> */}
+                    {/* border-t-3  */}
+                    <div className='md:border-t-0 py-4 border-[#777676] pl-4 flex justify-center border'>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/contact'>Contact</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/refund-policy'>refund policy</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/terms-and-conditions"  className="capitalized">term $ conditions</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/terms-and-conditions"  className="capitalized">term & conditions</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li>
                         </ul>
                     </div>
-                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4'>
+                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 border'>
+                        <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
+                            <ul className='flex flex-col gap-2'>
+                                <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>
+                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdOutlineMail className='text-red-400 text-2xl capitalize' /> Email : </span> support@mpluase.in</li>
+                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
+                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
+                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
+                                {/* <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span></li> */}
+                            </ul>
+                        </div>
+
                         <div className="p-2 flex flex-col space-y-3 ">
                             <h2 className="text-2xl font-semibold mb-2 capitalize">Stay Updated</h2>
                             <p className='text-sm text-gray-400'>
@@ -98,7 +108,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center px-10 py-6 justify-between text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
-                    <p className="flex">© 2025 Mpluse Fintech. All rights reserved. | Empowering Digital Finance for All</p>
+                    <p className="flex">© 2025 &nbsp; <span className='text-gray-200'> Mpluse Fintech Private Limited </span>. All rights reserved.</p>
                     <div className='flex '>
                         <NavLink to="/disclaimer" className="text-gray-400 hover:text-white text-sm capitalize">
                             disclaimer   

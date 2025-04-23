@@ -30,5 +30,4 @@ export default TechnologyInfo;
 
 const Section = styled.div `
     background-color: #eaf0f9d6;
-    /* height: 100vh; */
 `

@@ -1,9 +1,10 @@
 import React from "react";
 import Button from "../UI/Button";
+import styled from "styled-components";
 
 const ContactForm = () => {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-18">
+        <Section className="max-w-[1200px] mx-auto px-4 py-18">
             {/* Heading Section */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-gray-800 mb-2">Contact Us</h1>
@@ -21,7 +22,7 @@ const ContactForm = () => {
                         <label className="block text-sm font-medium text-gray-700">Name</label>
                         <input
                             type="text"
-                            className="mt-1 block w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full  rounded px-3 py-1 focus:outline-none shadow-[0_0_1px_1px_gray]"
                             placeholder="Enter your name"
                         />
                     </div>
@@ -29,7 +30,7 @@ const ContactForm = () => {
                         <label className="block text-sm font-medium text-gray-700">Email</label>
                         <input
                             type="email"
-                            className="mt-1 block w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full shadow-[0_0_1px_1px_gray] px-3 py-1 rounded p-3 "
                             placeholder="you@example.com"
                             required
                         />
@@ -38,7 +39,7 @@ const ContactForm = () => {
                         <label className="block text-sm font-medium text-gray-700">Message</label>
                         <textarea
                             rows="5"
-                            className="mt-1 block w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full shadow-[0_0_1px_1px_gray] px-3 py-1 rounded p-3 "
                             placeholder="Type your message..."
                         ></textarea>
                     </div>
@@ -72,8 +73,12 @@ const ContactForm = () => {
                 loading="lazy"
                 ></iframe>
             </div>
-        </div>
+        </Section>
     );
 };
 
 export default ContactForm;
+
+const Section = styled.section`
+    background-color: #eaf0f9d6;
+`

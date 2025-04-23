@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Button from '../UI/Button'
 import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
 
 const BlogExplore = () => {
 
@@ -27,7 +28,7 @@ const BlogExplore = () => {
         }, [])
 
     return (
-        <section className=' max-w-[1200px] mx-auto py-10 flex flex-col text-center mt-10' ref={ref}>
+        <Section className=' max-w-[1200px] mx-auto py-10 flex flex-col text-center mt-10' ref={ref}>
             <h2 className="text-2xl font-semibold mb-4 text-center">Explore By Category</h2>
             <div className="flex justify-center space-x-6">
             <NavLink to="/">
@@ -40,8 +41,12 @@ const BlogExplore = () => {
                 <Button className=" bg-blue-600 text-white" text="Compliance" />
             </NavLink>
             </div>
-        </section>
+        </Section>
     )
 }
 
 export default BlogExplore
+
+const Section = styled.section`
+    background-color: #eaf0f9d6;
+`

@@ -38,8 +38,8 @@ const Footer = () => {
     return (
         <section className='w-full z-50 '>
             <footer className='bg-[#000000] text-white'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 max-w-[1400px] mx-auto">
-                    <div className="img mb-2 flex flex-col justify-center  p-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 max-w-[1200px] mx-auto">
+                    <div className="img mb-2 flex-col justify-center px-4 ">
                         <img src={logo} alt="mpluse" className='h-18 w-33 object-contain' />
                         <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{description}</p>
                         <div className="flex gap-4 text-3xl py-4 justify-evenly">
@@ -124,7 +124,7 @@ const Footer = () => {
                     
                 </div>
 
-                <div className="flex items-center px-10 py-6 justify-between text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
+                <div className="flex items-center px-10 py-3 justify-between text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
                     <p className="flex">© 2025 &nbsp; <span className='text-gray-200'> Mpluse Fintech Private Limited </span>. All rights reserved.</p>
                     <div className='flex '>
                         <NavLink to="/disclaimer" className="text-gray-400 hover:text-white text-sm capitalize">

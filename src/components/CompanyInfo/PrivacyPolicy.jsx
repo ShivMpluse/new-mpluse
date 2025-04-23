@@ -83,19 +83,18 @@ const PrivacyPolicy = () => {
             <PrivacyPolicyHero />
             <Section className="max-w-[1200px] mt-28 mx-auto px-4 ">
                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">Privacy Policy</h1>
-                    <ul>
-                        {privacyData.map((section) => (
-                            <li key={section.id} className="mb-6">
-                                <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
-                                <ul className="list-disc list-inside space-y-1">
-                                    {section.content.map((point, index) => (
-                                    <li key={index}>{point}</li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                    
+                <ul>
+                    {privacyData.map((section) => (
+                        <li key={section.id} className="mb-6">
+                            <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
+                            <ul className="list-disc list-inside space-y-1">
+                                {section.content.map((point, index) => (
+                                <li key={index}>{point}</li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
             </Section>
         </>
         

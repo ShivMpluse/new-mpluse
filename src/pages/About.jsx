@@ -6,12 +6,12 @@ import OurStory from '../components/About/OurStory'
 
 const About = () => {
     return (
-        <section className='px-4 max-w-[1200px] mx-auto  mt-18'>
+        <>
             <HeroSection />
             <OurMission />
             <Team />
             <OurStory />
-        </section>
+        </>
     )
 }
 

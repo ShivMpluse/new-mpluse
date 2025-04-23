@@ -53,7 +53,7 @@ const OurWork = () => {
             </p>
         </div>
 
-        <ul className="mt-10 grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-auto ">
+        <ul className="mt-10 grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-auto px-4 md:px-0">
             {projects.map((project, index) => (
             <li
                 key={index}

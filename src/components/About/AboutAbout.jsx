@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const AboutAbout = () => {
     const cards = [
@@ -40,35 +41,39 @@ const AboutAbout = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
-        <h1 className="text-4xl font-bold text-center mb-8 text-blue-800">
-            About Mpluse Fintech
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-600 mb-10">
-            Mpluse is a tech-driven fintech enabler that helps businesses launch
-            branded digital finance services — without code, license, or regulatory
-            headache.
-        </p>
+        <Section className="min-h-screen bg-gray-100 p-6">
+            <h1 className="text-4xl font-bold text-center mb-8 text-blue-800">
+                About Mpluse Fintech
+            </h1>
+            <p className="text-center text-lg max-w-3xl mx-auto text-gray-600 mb-10">
+                Mpluse is a tech-driven fintech enabler that helps businesses launch
+                branded digital finance services — without code, license, or regulatory
+                headache.
+            </p>
 
-        <div className="grid gap-6 md:grid-cols-2">
-            {cards.map((card, index) => (
-            <div
-                key={index}
-                className="bg-white shadow-lg rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
-            >
-                <h2 className="text-2xl font-semibold text-blue-700 mb-4">
-                {card.title}
-                </h2>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                {card.points.map((point, idx) => (
-                    <li key={idx}>{point}</li>
+            <div className="grid gap-6 md:grid-cols-2">
+                {cards.map((card, index) => (
+                <div
+                    key={index}
+                    className="bg-white shadow-lg rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
+                >
+                    <h2 className="text-2xl font-semibold text-blue-700 mb-4">
+                    {card.title}
+                    </h2>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    {card.points.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                    ))}
+                    </ul>
+                </div>
                 ))}
-                </ul>
             </div>
-            ))}
-        </div>
-        </div>
+        </Section>
     );
 };
 
 export default AboutAbout;
+
+const Section = styled.section`
+    background-color: #eaf0f9d6;
+`

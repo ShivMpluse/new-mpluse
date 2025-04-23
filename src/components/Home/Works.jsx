@@ -72,7 +72,7 @@ const Works = () => {
     return (
         <section className='max-w-[1200px] mx-auto py-6' ref={ref}>
             <h1 className="text-4xl capitalize py-10 text-center font-semibold">how it works</h1>
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
                 {
                     data.map((item) => (
                         <li key={item.id}  className="border border-[#e7e7e7] p-8 shadow-lg bg-white text-black rounded-xl transform hover:scale-105 transition-all">

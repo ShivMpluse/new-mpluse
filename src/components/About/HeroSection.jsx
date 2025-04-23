@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import debit from '../../../public/image/mpluse-card.png'
 import Button from '../UI/Button'
 
@@ -5,7 +6,7 @@ const HeroSection = () => {
 
     return (
         
-        <section className='px-4 max-w-[1200px] mx-auto  mt-18'>
+        <Section className='px-4 max-w-[1200px] mx-auto  mt-18'>
             <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 items-center mt-16 ">
                 <div className="text-center gap-6 md:text-left flex flex-col items-center md:items-start px-4 md:px-10 py-4 ">
                     {/* <div className="bg-white rounded-full px-2 py-1 text-black text-sm font-semibold">🔥 100% Trusted Platform</div> */}
@@ -24,8 +25,12 @@ const HeroSection = () => {
                 </div>
             </div>
             
-        </section>
+        </Section>
     )
 }
 
 export default HeroSection
+
+const Section = styled.section`
+    background-color: #eaf0f9d6;
+`

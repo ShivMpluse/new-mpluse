@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const disclaimerData = [
     {
@@ -41,27 +42,31 @@ const disclaimerData = [
 
 const DisclaimerPage = () => {  
     return (
-        <div className="max-w-[1200px] mt-28 mx-auto px-4 py-10 ">
-        <h1 className="text-3xl font-bold mb-6">Legal Disclaimer - Mpluse Fintech Private Limited</h1>
+        <Section className="max-w-[1200px] mt-28 mx-auto px-4 py-10 ">
+            <h1 className="text-3xl font-bold mb-6">Legal Disclaimer - Mpluse Fintech Private Limited</h1>
 
-        {disclaimerData.map((section, index) => (
-            <div key={index} className="mb-6">
-            <h2 className="text-xl font-semibold mb-2">
-                {section.icon} {section.title}
-            </h2>
-            {section.content.split("\n").map((line, i) => (
-                <p key={i} className=" leading-relaxed">
-                {line}
-                </p>
+            {disclaimerData.map((section, index) => (
+                <div key={index} className="mb-6">
+                <h2 className="text-xl font-semibold mb-2">
+                    {section.icon} {section.title}
+                </h2>
+                {section.content.split("\n").map((line, i) => (
+                    <p key={i} className=" leading-relaxed">
+                    {line}
+                    </p>
+                ))}
+                </div>
             ))}
-            </div>
-        ))}
 
-        <div className="mt-10 border-t border-gray-700 pt-4 text-sm ">
-            &copy; 2025 Mpluse Fintech Private Limited. All rights reserved.
-        </div>
-        </div>
+            <div className="mt-10 border-t border-gray-700 pt-4 text-sm ">
+                &copy; 2025 Mpluse Fintech Private Limited. All rights reserved.
+            </div>
+        </Section>
     );
 };
 
 export default DisclaimerPage;
+
+const Section = styled.section`
+    background-color: #eaf0f9d6;
+`

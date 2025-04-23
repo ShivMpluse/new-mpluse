@@ -39,7 +39,7 @@ const Footer = () => {
         <section className='w-full z-50 '>
             <footer className='bg-[#000000] text-white'>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 max-w-[1400px] mx-auto">
-                    <div className="img mb-2 flex flex-col justify-center border p-4">
+                    <div className="img mb-2 flex flex-col justify-center  p-4">
                         <img src={logo} alt="mpluse" className='h-18 w-33 object-contain' />
                         <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{description}</p>
                         <div className="flex gap-4 text-3xl py-4 justify-evenly">
@@ -60,7 +60,7 @@ const Footer = () => {
                         </ul>
                     </div> */}
                     {/* border-t-3  */}
-                    <div className='md:border-t-0 py-4 border-[#777676] flex justify-center border'>
+                    <div className='md:border-t-0 py-4 border-[#777676] flex justify-center '>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
                             {footerItems.map((elem) =>(
@@ -77,7 +77,7 @@ const Footer = () => {
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li> */}
                         </ul>
                     </div>
-                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 border'>
+                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 '>
                         <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
                             <ul className='flex flex-col gap-2'>
                                 <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>

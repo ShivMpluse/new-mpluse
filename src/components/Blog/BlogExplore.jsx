@@ -27,7 +27,7 @@ const BlogExplore = () => {
         }, [])
 
     return (
-        <section className=' max-w-[1200px] mx-auto py-10 flex flex-col text-center mt-20' ref={ref}>
+        <section className=' max-w-[1200px] mx-auto py-10 flex flex-col text-center mt-10' ref={ref}>
             <h2 className="text-2xl font-semibold mb-4 text-center">Explore By Category</h2>
             <div className="flex justify-center space-x-6">
             <NavLink to="/">

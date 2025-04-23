@@ -3,34 +3,7 @@ import debit from '../../../public/image/mpluse-card.png'
 import Button from '../UI/Button'
 import About from '../../pages/About'
 
-const AboutHero = () => {
-
-    // const images = [
-    //     {
-    //         id: "1",
-    //         image: "/image/hdfc.png"
-    //     },
-    //     {
-    //         id: "2",
-    //         image: "/image/icici.png"
-    //     },
-    //     {
-    //         id: "3",
-    //         image: "/image/axis.png"
-    //     },
-    //     {
-    //         id: "4",
-    //         image: "/image/union.png"
-    //     },
-    //     {
-    //         id: "5",
-    //         image: "/image/kotak.png"
-    //     },
-    //     {
-    //         id: "6",
-    //         image: "/image/panjab.png"
-    //     }
-    // ]
+const ContactHero = () => {
 
     return (
         
@@ -39,7 +12,7 @@ const AboutHero = () => {
                 <div className="text-center gap-6 md:text-left flex flex-col items-center md:items-start px-4 md:px-10 py-4 ">
                     {/* <div className="bg-white rounded-full px-2 py-1 text-black text-sm font-semibold">🔥 100% Trusted Platform</div> */}
                     <h2 className=' text-black text-2xl md:text-5xl mt-6 leading-tight capitalize flex-wrap '>
-                        The Future of Payments is Now. And It’s <span className='text-[#CF1C53]'>Mpluse.</span> 
+                        Partner with us for payment innovation  <span className='text-[#CF1C53]'>Mpluse.</span> 
                     </h2>
                     {/* <span className='text-[#14fd2b]'>FLEXIBILITY</span> */}
                     <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black'>
@@ -56,7 +29,7 @@ const AboutHero = () => {
     )
 }
 
-export default AboutHero
+export default ContactHero
 
 
 const Section = styled.div `

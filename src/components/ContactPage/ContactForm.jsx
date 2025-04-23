@@ -48,8 +48,11 @@ const ContactForm = () => {
 
                 {/* Contact Info */}
                 <div className=" p-6 rounded-lg  shadow-[0_0_1px_1px_gray] space-y-4">
-                    <h2 className="text-xl font-semibold text-gray-800">Our Office</h2>
-                    <p className="text-gray-600">Mpluse Fintech Pvt. Ltd.<br />Lucknow, Uttar Pradesh, India</p>
+                    <h2 className="text-xl font-semibold text-gray-800 capitalize">Our corporate  Office address</h2>
+                    <p className="text-gray-600 capitalize">Mpluse Fintech Pvt. Ltd.<br />A45/1 Aashray 1 Sulabh Awas Behaind Of Janeshwar Mishra Park Gomtinager Extention Sector 1, 226010</p>
+
+                    <h2 className="text-xl font-semibold text-gray-800 capitalize">Our registered  Office address</h2>
+                    <p className="text-gray-600 capitalize">Mpluse Fintech Pvt. Ltd.<br />119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025</p>
 
                     <h2 className="text-xl font-semibold text-gray-800">Email</h2>
                     <p className="text-blue-600">support@mpluse.in</p>

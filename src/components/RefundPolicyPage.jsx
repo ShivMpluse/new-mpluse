@@ -1,5 +1,8 @@
 // import { div } from "framer-motion"; // No need to import 'section' from 'framer-motion/client'
 
+import styled from "styled-components";
+import RefundHeroSection from "./RefundHeroSection";
+
 function RefundPolicyPage() {
     const refundPolicy = [
         {
@@ -55,28 +58,36 @@ function RefundPolicyPage() {
     ];
 
     return (
-        <div className="mt-20 max-w-[1200px] mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-6">Refund Policy</h1>
-            <ul>
-                {refundPolicy.map(section => (
-                    <li key={section.id} className="mt-10 mb-6">
-                        <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
-                        <p className="text-gray-700">{section.content}</p>
-                    </li>
-                ))}
-            </ul>
-
-            {/* Contact Info Section */}
-            <div className="mt-16">
-                <h2 className="text-xl font-semibold mb-2">Contact Information</h2>
-                <ul className="text-gray-700 list-disc p-4">
-                    <li> support@mpluse.in</li>
-                    <li> legal@mpluse.in</li>
-                    <li> 011-69046382</li>
+        <>
+            <RefundHeroSection />
+            <Section className="mt-20 max-w-[1200px] mx-auto p-4">
+                <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center">Refund Policy</h1>
+                <ul>
+                    {refundPolicy.map(section => (
+                        <li key={section.id} className="mt-10 mb-6">
+                            <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
+                            <p className="text-gray-700">{section.content}</p>
+                        </li>
+                    ))}
                 </ul>
-            </div>
-        </div>
+
+                {/* Contact Info Section */}
+                <div className="mt-16">
+                    <h2 className="text-xl font-semibold mb-2">Contact Information</h2>
+                    <ul className="text-gray-700 list-disc p-4">
+                        <li> support@mpluse.in</li>
+                        <li> legal@mpluse.in</li>
+                        <li> 011-69046382</li>
+                    </ul>
+                </div>
+        </Section> 
+        </>
+        
     );
 }
 
 export default RefundPolicyPage;
+
+const Section = styled.section `
+    background-color: #eaf0f9d6;
+`

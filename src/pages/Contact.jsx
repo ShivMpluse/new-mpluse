@@ -1,11 +1,11 @@
 import React from 'react'
-import AboutHero from '../components/ContactPage/AboutHero'
+import ContactHero from '../components/ContactPage/ContactHero'
 import ContactForm from '../components/ContactPage/ContactForm'
 
 const Contact = () => {
     return (
         <>
-            <AboutHero />
+            <ContactHero />
             <ContactForm />
         </>
     )

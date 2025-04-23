@@ -21,8 +21,18 @@ const Footer = () => {
 
     let description = `Mpluse Fintech Private Limited is a technology platform that provides API-based financial infrastructure and white-labeled solutions in partnership with licensed banks, NBFCs, and payment aggregators. We are not a bank, NBFC, or payment aggregator and do not hold or claim to hold any license from RBI, NPCI, or any regulatory authority. All financial services and settlements enabled through our platform are operated solely by our regulated partners. Mpluse does not hold end-user funds and acts strictly as a technology facilitator.` 
     const registeredAddress = `119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025`
-    const corporateAddress = ` Laxmi Market,Sector 1, Gomti Nagar, Lucknow, Uttar Pradesh 226010`
+    const corporateAddress = ` A45/1 Aashray 1 Sulabh Awas Behaind Of Janeshwar Mishra Park Gomtinager Extention Sector 1, 226010`
 
+
+    const footerItems = [
+        { name: 'Home', path: './' },
+        { name: 'About', path: '/about' },
+        { name: 'Contact', path: '/contact' },
+        { name: 'Blog', path: '/blog' },
+        { name: 'Refund & Policy', path: '/refund-policy' },
+        { name: 'term & conditions', path: '/terms-and-conditions' },
+        { name: 'privacy policy', path: '/privacy-Policy' }
+    ];
 
 
     return (
@@ -53,11 +63,18 @@ const Footer = () => {
                     <div className='md:border-t-0 py-4 border-[#777676] flex justify-center border'>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
+                            {footerItems.map((elem) =>(
+                                <li key={elem.index}>
+                                    <ul className='list-disk'>
+                                        <li><NavLink to={elem.path}>{elem.name}</NavLink></li>
+                                    </ul>
+                                </li>
+                            ))}
+                            {/* <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/contact'>Contact</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/refund-policy'>refund policy</NavLink></li>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/terms-and-conditions"  className="capitalized">term & conditions</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li>
+                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li> */}
                         </ul>
                     </div>
                     <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 border'>

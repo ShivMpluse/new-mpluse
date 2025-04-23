@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <div className="text-center gap-6 md:text-left flex flex-col items-center md:items-start px-4 md:px-10 py-4 ">
                     {/* <div className="bg-white rounded-full px-2 py-1 text-black text-sm font-semibold">🔥 100% Trusted Platform</div> */}
                     <h2 className=' text-black text-2xl md:text-5xl mt-6 leading-tight capitalize'>
-                    Empowering Ideas,<br className="hidden md:block" /> Building the Future
+                    Empowering Ideas,<br className="hidden md:block" /> Building the Future   <span className='text-[#CF1C53]'>Mpluse.</span> 
                     </h2>
                     {/* <span className='text-[#14fd2b]'>FLEXIBILITY</span> */}
                     <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black'>

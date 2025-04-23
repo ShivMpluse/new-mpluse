@@ -50,7 +50,7 @@ const Footer = () => {
                         </ul>
                     </div> */}
                     {/* border-t-3  */}
-                    <div className='md:border-t-0 py-4 border-[#777676] pl-4 flex justify-center border'>
+                    <div className='md:border-t-0 py-4 border-[#777676] flex justify-center border'>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
                             <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>

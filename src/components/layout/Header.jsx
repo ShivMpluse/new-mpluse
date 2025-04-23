@@ -4,7 +4,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import Button from '../UI/Button';
 import { NavLink } from 'react-router-dom';
-import { motion } from 'motion/react';
 
 function Header() {
     const [toggle, setToggle] = useState(false);
@@ -17,7 +16,7 @@ function Header() {
         { name: 'Home', path: './' },
         { name: 'About', path: '/about' },
         { name: 'Contact', path: '/contact' },
-        { name: 'Contact US', path: '/contactUS' },
+        { name: 'Blog', path: '/blog' },
     ];
 
     return (
@@ -41,9 +40,7 @@ function Header() {
                                             : 'hover:text-red-500'
                                     }
                                 >
-                                <motion.div whileHover={{color:'green', scale:1.1}}>
                                     {name}
-                                </motion.div>
                                 </NavLink>
                             </li>
                         ))}
@@ -51,7 +48,7 @@ function Header() {
                 </nav>
 
                 {/* Button */}
-                <Button className="border rounded-lg sm:hidden lg:flex max-h-6xl" text='Sign Up' />
+                <Button className="border" text='Sign Up' />
 
                 {/* Hamburger for Mobile */}
                 <div className="lg:hidden">

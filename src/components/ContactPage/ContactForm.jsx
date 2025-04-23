@@ -16,12 +16,12 @@ const ContactForm = () => {
             <div className="grid md:grid-cols-2 gap-10">
                 {/* Contact Form */}
                 <div>
-                <form className="space-y-6 bg-white p-6 rounded-lg shadow-lg">
+                <form className="space-y-6 p-6 rounded-lg shadow-[0_0_1px_1px_gray]">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Name</label>
                         <input
                             type="text"
-                            className="mt-1 block w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Enter your name"
                         />
                     </div>
@@ -29,7 +29,7 @@ const ContactForm = () => {
                         <label className="block text-sm font-medium text-gray-700">Email</label>
                         <input
                             type="email"
-                            className="mt-1 block w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="you@example.com"
                             required
                         />
@@ -38,7 +38,7 @@ const ContactForm = () => {
                         <label className="block text-sm font-medium text-gray-700">Message</label>
                         <textarea
                             rows="5"
-                            className="mt-1 block w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="mt-1 block w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Type your message..."
                         ></textarea>
                     </div>
@@ -47,7 +47,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Contact Info */}
-                <div className="bg-white p-6 rounded-lg shadow-lg space-y-4">
+                <div className=" p-6 rounded-lg  shadow-[0_0_1px_1px_gray] space-y-4">
                     <h2 className="text-xl font-semibold text-gray-800">Our Office</h2>
                     <p className="text-gray-600">Mpluse Fintech Pvt. Ltd.<br />Lucknow, Uttar Pradesh, India</p>
 

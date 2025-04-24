@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                         <li key={index} className="mb-6 flex flex-col gap-4">
                             <h2 className="text-xl font-[400] mb-2">{section.title}</h2>
                             {section.content.split("\n").map((line, i) => (
-                                <p key={i} className="mb-2 whitespace-pre-wrap">{line}</p>
+                                <p key={i} className="mb-2 whitespace-pre-wrap capitalize">{line}</p>
                             ))}
                         </li>
                     ))}

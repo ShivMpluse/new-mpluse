@@ -61,7 +61,7 @@ const privacyPolicyData = [
         },
         {
         title: "16. Contact Information",
-        content: `Email: privacy@mpluse.in\nPhone: 011-69046382\nAddress: 119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025
+        content: `Email: privacy@mpluse.in\nPhone: 011-69046382\ncorporate address : 119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025
 `
         }
     ];

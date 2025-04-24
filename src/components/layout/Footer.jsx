@@ -109,11 +109,11 @@ const Footer = () => {
                                 placeholder="Enter your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="p-2 text-white rounded-md w-full outline-none focus:ring-2 focus:ring-red-300 border border-white"
+                                className="p-2 text-white  w-full outline-none  border border-white"
                             />
                             <button
                                 onClick={handleSubscribe}
-                                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+                                className="border bg-blue-700 text-white px-4 py-2 "
                             >
                                 Subscribe
                             </button>

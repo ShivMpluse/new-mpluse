@@ -14,7 +14,7 @@ const TermsAndConditions = () => {
                     {termsData.map((section, index) => (
                         <li key={index} className=" flex flex-col justify-center items-start  mb-4">
                             <h2 className="text-xl font-semibold mt-6 mb-2">{section.title}</h2>
-                            <p className="mb-4">{section.content}</p>
+                            <p className="mb-4 text-justify">{section.content}</p>
                         </li>
                     ))}
                     </ul>

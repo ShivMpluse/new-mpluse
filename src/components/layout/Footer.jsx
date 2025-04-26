@@ -1,6 +1,6 @@
 import logo from '../../../public/image/logo-full2.png'
 import { IoLogoInstagram, IoLogoFacebook, IoLogoWhatsapp } from "react-icons/io5";
-import { FaTwitter } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa6";
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -43,11 +43,11 @@ const Footer = () => {
                         <img src={logo} alt="mpluse" className='h-18 w-33 object-contain' />
                         <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{description}</p>
                         <div className="flex gap-4 text-3xl py-4 justify-evenly">
-                            <IoLogoInstagram className='text-red-500' />
-                            <IoLogoFacebook className='text-blue-500' />
-                            <IoLogoWhatsapp className='text-green-500' />    
-                            <FaTwitter className='text-blue-500' />
-                            <FaLinkedin className='text-blue-500' />
+                        <NavLink to="https://instagram.com/mpluseltd" target='_blank'><IoLogoInstagram className='text-red-500' /></NavLink>
+                        <NavLink to="https://facebook.com/mpluseltd" target='_blank'><IoLogoFacebook className='text-blue-500' /></NavLink>
+                        <NavLink to="https://whatsapp.com/channel/0029VarVa5yHQbS2kGZiJg2F" target='_blank'><IoLogoWhatsapp className='text-green-500' /></NavLink>
+                        <NavLink to="https://twitter.com/mpluseltd" target='_blank'><BsTwitterX className='text-blue-500' /></NavLink>
+                        <NavLink to="https://linkedin.com/company/mpluseltd" target='_blank'><FaLinkedin className='text-blue-500' /></NavLink>
                         </div>
                     </div> 
                     {/* <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>

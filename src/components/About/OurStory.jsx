@@ -4,7 +4,7 @@ import story from '../../../public/image/story.png'
 
 const OurStory = () => {
     return (
-        <Section className='max-w-[1200px] mx-auto py-10'>
+        <Section className='max-w-[1200px] mx-auto py-10 border border-[#d3d3d3]'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="img flex justify-center items-center">
                     <img src={story} alt="Our Story" className='h-[300px] w-[550px] object-cover rounded-lg' />

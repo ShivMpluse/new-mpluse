@@ -50,16 +50,7 @@ const Footer = () => {
                         <NavLink to="https://linkedin.com/company/mpluseltd" target='_blank'><FaLinkedin className='text-blue-500' /></NavLink>
                         </div>
                     </div> 
-                    {/* <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
-                        <ul className='flex flex-col gap-2'>
-                            <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdOutlineMail className='text-red-400 text-2xl capitalize' /> Email : </span> support@mpluase.in</li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
-                            <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
-                        </ul>
-                    </div> */}
-                    {/* border-t-3  */}
+                    
                     <div className='md:border-t-0 py-4 border-[#777676] flex justify-center '>
                         <ul>
                             <h2 className='text-lg font-semibold mb-2'>Pages</h2>
@@ -70,11 +61,6 @@ const Footer = () => {
                                     </ul>
                                 </li>
                             ))}
-                            {/* <li className='text-sm text-[#CDCDCD] mb-1 capitalize hover:text-white'><NavLink to='/About'>About</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/contact'>Contact</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to='/refund-policy'>refund policy</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/terms-and-conditions"  className="capitalized">term & conditions</NavLink></li>
-                            <li className='text-sm text-[#CDCDCD] mb-1 capitalize'><NavLink to="/privacy-Policy"  className="capitalized">privacy policy</NavLink></li> */}
                         </ul>
                     </div>
                     <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 '>

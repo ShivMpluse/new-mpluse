@@ -43,7 +43,7 @@ const HeroSection = ({
                     <h2 className='text-black text-2xl md:text-5xl mt-6 leading-tight capitalize'>
                         {heading}
                     </h2>
-                    <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black'>
+                    <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black text-justify'>
                         {description}
                     </p>
                     <Button 

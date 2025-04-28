@@ -1,4 +1,4 @@
-import gst from '../../../../public/image/GST-verification.png'
+import gst from '/image/gst-verification.png'
 import HeroSectionUI from '../../../components/UI/HeroSectionUI'
 
 const GST_Verification = () => {

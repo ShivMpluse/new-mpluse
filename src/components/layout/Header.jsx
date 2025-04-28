@@ -21,9 +21,18 @@ function Header() {
             name: 'Product',
             path: '/product',
             subMenu: [
-                { name: 'Product 1', path: '/product/product1' },
+                { name: 'GST verification API', path: '/product/GST-verification' },
                 { name: 'Product 2', path: '/product/product2' },
                 { name: 'Product 3', path: '/product/product3' },
+                { name: 'Product 4', path: '/product/product4' },
+                { name: 'Product 5', path: '/product/product5' },
+                { name: 'Product 6', path: '/product/product6' },
+                { name: 'Product 7', path: '/product/product7' },
+                { name: 'Product 8', path: '/product/product8' },
+                { name: 'Product 9', path: '/product/product9' },
+                { name: 'Product 10', path: '/product/product10' },
+                { name: 'Product 11', path: '/product/product11' },
+                { name: 'Product 12', path: '/product/product12' },
             ]
         }
     ];
@@ -39,7 +48,7 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex gap-8 items-center">
-                    <ul className='flex gap-8 items-center relative'>
+                    <ul className='flex gap-8 items-center '>
                         {navItems.map(({ name, path, subMenu }) => (
                             <li key={name} className='h-10 flex items-center cursor-pointer relative group'>
                                 <NavLink
@@ -47,16 +56,21 @@ function Header() {
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'text-red-500 font-semibold border-b-2 border-red-500'
-                                            : 'hover:text-red-500'
+                                            : 'hover:text-green-500'
                                     }
                                 >
                                     {name}
                                 </NavLink>
                                 { subMenu && (
-                                    <ul class="absolute top-full left-0 bg-white shadow-md rounded hidden group-hover:block min-w-[150px]">
+                                    <ul class="p-4 absolute top-full opacity-90 left-[-700px] text-white bg-gray-800 shadow-md rounded hidden group-hover:grid grid-cols-3 gap-6 min-w-[1000px]">
                                         {subMenu.map((item) => (
-                                            <li key={item.name} className='px-4 py-2 hover:bg-gray-100'>
-                                                <NavLink to={item.path} className="block text-gray-800">{item.name}</NavLink>
+                                            <li key={item.name} className='p-6  '>
+                                                <NavLink 
+                                                    to={item.path}
+                                                    className="flex justify-center capitalize"
+                                                >
+                                                    {item.name}
+                                                </NavLink>
                                             </li>
                                         ))}
                                     </ul>

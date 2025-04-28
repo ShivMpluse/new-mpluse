@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
     const [toggle, setToggle] = useState(false);
+    const [openSubmenu, setOpenSubmenu] = useState(null);
 
     const handleMenuToggle = () => {
         setToggle(!toggle);
@@ -37,7 +38,6 @@ function Header() {
         }
     ];
 
-
     return (
         <section className='fixed bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50'>
             <header className="flex justify-between items-center px-8 py-4 w-full mx-auto relative max-w-[1200px]">
@@ -61,11 +61,11 @@ function Header() {
                                 >
                                     {name}
                                 </NavLink>
-                                { subMenu && (
-                                    <ul class="p-4 absolute top-full opacity-90 left-[-700px] text-white bg-gray-800 shadow-md rounded hidden group-hover:grid grid-cols-3 gap-6 min-w-[1000px]">
+                                {subMenu && (
+                                    <ul className="p-4 absolute top-full opacity-90 left-[-700px] text-white bg-gray-800 shadow-md rounded hidden group-hover:grid grid-cols-3 gap-6 min-w-[1000px]">
                                         {subMenu.map((item) => (
-                                            <li key={item.name} className='p-6  '>
-                                                <NavLink 
+                                            <li key={item.name} className='p-6'>
+                                                <NavLink
                                                     to={item.path}
                                                     className="flex justify-center capitalize"
                                                 >
@@ -74,8 +74,7 @@ function Header() {
                                             </li>
                                         ))}
                                     </ul>
-                                ) }
-                                
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -95,23 +94,54 @@ function Header() {
                 {toggle && (
                     <div className="absolute top-full left-0 w-full bg-lime-200 p-4 lg:hidden">
                         <ul className='flex flex-col gap-4 items-center'>
-                            {navItems.map(({ name, path }) => (
-                                <li key={name} className="h-10 flex items-center">
-                                    <NavLink
-                                        to={path}
-                                        onClick={() => setToggle(false)} // close on click
-                                        className={({ isActive }) =>
-                                            isActive
-                                                ? 'text-red-500 font-semibold underline'
-                                                : 'hover:text-red-500'
-                                        }
+                            {navItems.map(({ name, path, subMenu }) => (
+                                <li key={name} className="w-full">
+                                    <div
+                                        onClick={() => {
+                                            if (subMenu) {
+                                                setOpenSubmenu(openSubmenu === name ? null : name);
+                                            } else {
+                                                setToggle(false);
+                                            }
+                                        }}
+                                        className="flex justify-between items-center w-full px-4 py-2 cursor-pointer"
                                     >
-                                        {name}
-                                    </NavLink>
+                                        <NavLink
+                                            to={subMenu ? '#' : path}
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? 'text-red-500 font-semibold underline'
+                                                    : 'hover:text-red-500'
+                                            }
+                                        >
+                                            {name}
+                                        </NavLink>
+                                        {subMenu && (
+                                            <span className="text-xl">
+                                                {openSubmenu === name ? '-' : '+'}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    {/* SubMenu Items */}
+                                    {subMenu && openSubmenu === name && (
+                                        <ul className="flex flex-col gap-2 mt-2 w-full bg-green-200 rounded-md p-2">
+                                            {subMenu.map((item) => (
+                                                <li key={item.name}>
+                                                    <NavLink
+                                                        to={item.path}
+                                                        onClick={() => setToggle(false)}
+                                                        className="capitalize text-center block w-full py-2 hover:bg-green-300 rounded"
+                                                    >
+                                                        {item.name}
+                                                    </NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </li>
                             ))}
                         </ul>
-                        {/* <button className="border p-2 rounded-lg mt-4 w-full">Sign Up</button> */}
                     </div>
                 )}
             </header>

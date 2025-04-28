@@ -29,13 +29,13 @@ const images = [
 ]
 
 const HeroSection = ({ 
-    heading, 
-    description, 
-    buttonText, 
-    imageSrc, 
-    imageAlt, 
-    onButtonClick 
-}) => {
+        heading, 
+        description, 
+        buttonText, 
+        imageSrc, 
+        imageAlt, 
+        onButtonClick 
+    }) => {
     return (
         <Section className='px-4 max-w-[1200px] mx-auto mt-18'>
             <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 items-center mt-16">

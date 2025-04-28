@@ -8,6 +8,7 @@ import RefundPolicyPage from "./components/RefundPolicyPage";
 import DisclaimerPage from "./pages/DisclaimerPage";
 import PrivacyPolicy from "./components/CompanyInfo/PrivacyPolicy";
 import Blog from "./pages/Blog";
+import Product from "./pages/Product";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,18 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
+      },
+      {
+        path: '/blog',
+        element: <Blog />
+      },
+      {
+        path: '/product',
+        element: <Product />
       },
 
       {
@@ -38,16 +51,6 @@ const router = createBrowserRouter([
       {
         path:'/disclaimer',
         element: <DisclaimerPage />
-      },
-
-
-      {
-        path: '/contact',
-        element: <Contact />
-      },
-      {
-        path: '/blog',
-        element: <Blog />
       }
     ]
   }

@@ -17,7 +17,17 @@ function Header() {
         { name: 'About', path: '/about' },
         { name: 'Contact', path: '/contact' },
         { name: 'Blog', path: '/blog' },
+        {
+            name: 'Product',
+            path: '/product',
+            subMenu: [
+                { name: 'Product 1', path: '/product/product1' },
+                { name: 'Product 2', path: '/product/product2' },
+                { name: 'Product 3', path: '/product/product3' },
+            ]
+        }
     ];
+
 
     return (
         <section className='fixed bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50'>
@@ -29,9 +39,9 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex gap-8 items-center">
-                    <ul className='flex gap-8 items-center'>
-                        {navItems.map(({ name, path }) => (
-                            <li key={name} className='h-10 flex items-center cursor-pointer'>
+                    <ul className='flex gap-8 items-center relative'>
+                        {navItems.map(({ name, path, subMenu }) => (
+                            <li key={name} className='h-10 flex items-center cursor-pointer relative group'>
                                 <NavLink
                                     to={path}
                                     className={({ isActive }) =>
@@ -42,6 +52,16 @@ function Header() {
                                 >
                                     {name}
                                 </NavLink>
+                                { subMenu && (
+                                    <ul class="absolute top-full left-0 bg-white shadow-md rounded hidden group-hover:block min-w-[150px]">
+                                        {subMenu.map((item) => (
+                                            <li key={item.name} className='px-4 py-2 hover:bg-gray-100'>
+                                                <NavLink to={item.path} className="block text-gray-800">{item.name}</NavLink>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) }
+                                
                             </li>
                         ))}
                     </ul>

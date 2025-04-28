@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import debit from '../../../public/image/mpluse-card.png'
-import Button from '../UI/Button'
-import HeroSectionUI from '../UI/HeroSectionUI'
+import HeroSectionUI from '../../components/UI/HeroSectionUI'
+
 
 const HeroSection = () => {
 

@@ -9,7 +9,7 @@ import DisclaimerPage from "./pages/DisclaimerPage";
 import PrivacyPolicy from "./components/CompanyInfo/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import Product from "./pages/Product";
-import GST_Verification from "./components/Project/project-1/GST_Verification";
+import GST_Verification from "./pages/GST_Verification";
 
 const router = createBrowserRouter([
   {

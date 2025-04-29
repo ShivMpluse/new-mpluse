@@ -37,7 +37,7 @@ const GstStepsSection = () => {
                 </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
                     {steps.map((step, index) => (
-                    <li key={index} className="flex flex-col items-center px-4 py-10 bg-white hover:shadow-2xl duration-500 hover:scale-105">
+                    <li key={index} className="flex flex-col items-center px-4 py-10 bg-white hover:shadow-2xl duration-500 hover:scale-105 rounded-lg">
                         <div className={`w-24 h-24 rounded-full flex items-center justify-center text-3xl ${step.bgColor}`}>
                             {step.icon}
                         </div>

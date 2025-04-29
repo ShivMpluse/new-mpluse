@@ -1,8 +1,14 @@
 import gst from '/image/GST-01.png'
-import HeroSectionUI from '../../../components/UI/HeroSectionUI'
-import GstBenefits from './GstBenifits'
-import GstStepsSection from './GstStepsSection'
-import AdvantagesSection from './AdvantageSection'
+import HeroSectionUI from '../components/UI/HeroSectionUI'
+import GstBenefits from '../components/Project/project-1/GstBenifits'
+import GstStepsSection from '../components/Project/project-1/GstStepsSection'
+import AdvantagesSection from '../components/Project/project-1/AdvantageSection'
+import IndustriesSection from '../components/Project/project-1/IndustriesSection'
+import ApiIntegrationComponent from '../components/Project/project-1/ApiIntegrationComponent'
+import ComplianceBadges from '../components/Project/project-1/ComplianceBadges'
+import StatsSection from '../components/Project/project-1/StatsSection'
+import FaqSection from '../components/Project/project-1/FaqSection'
+import Instantly from '../components/Project/project-1/Instantly'
 
 const GST_Verification = () => {
     return (
@@ -21,6 +27,12 @@ const GST_Verification = () => {
             <GstBenefits />
             <GstStepsSection />
             <AdvantagesSection />
+            <IndustriesSection />
+            <ApiIntegrationComponent />
+            <ComplianceBadges />
+            <StatsSection />
+            <FaqSection />
+            <Instantly />
         </>
         
     )

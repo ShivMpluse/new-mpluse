@@ -32,6 +32,7 @@ const HeroSection = ({
         heading, 
         description, 
         buttonText, 
+        button_Text, 
         imageSrc, 
         imageAlt, 
         onButtonClick 
@@ -46,17 +47,25 @@ const HeroSection = ({
                     <p className='text-lg mt-4 max-w-md font-sans font-[400] text-black text-justify'>
                         {description}
                     </p>
-                    <Button 
-                        text={buttonText} 
-                        className='px-4 py-2 bg-[#b5001e] text-white font-semibold'
-                        onClick={onButtonClick}
-                    />
+                    <div class="flex flex-wrap gap-5 md:gap-10">
+                        <Button 
+                            text={buttonText} 
+                            className='px-4 py-2 bg-[#b5001e] text-white font-semibold'
+                            onClick={onButtonClick}
+                        />
+                        <Button 
+                            text={button_Text} 
+                            className='px-4 py-2 bg-transparent border text-black font-semibold'
+                            onClick={onButtonClick}
+                        />
+                    </div>
+                    
                 </div>
                 <div className="flex justify-center md:justify-end">
                     <img 
                         src={imageSrc} 
                         alt={imageAlt} 
-                        className='bottom-[-30px] right-8 md:right-16 scale-75 md:scale-90 z-20' 
+                        className='bottom-[-10px] right-8 md:right-16 scale-75 md:scale-90 z-20  '
                     />
                 </div>
             </div>

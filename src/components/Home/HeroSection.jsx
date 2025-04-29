@@ -15,6 +15,7 @@ const HeroSection = () => {
                 }
                 description="Welcome to Mpluse — where innovation meets purpose. We are committed to building meaningful fintech experiences that simplify complexity, empower businesses, and drive growth. With a focus on technology, trust, and impact, we deliver secure, scalable solutions that truly matter in today’s fast-evolving digital world."
                 buttonText="Open Account"
+                button_Text="Sign-Up"
                 imageSrc={debit}
                 imageAlt="Mpluse Debit Card"
                 onButtonClick={() => console.log('Button clicked')}

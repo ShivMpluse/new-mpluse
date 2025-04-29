@@ -11,13 +11,10 @@ function Header() {
 
     const handleMenuToggle = () => {
         setToggle(!toggle);
-        if (!toggle) {
-            setOpenSubmenu(null);
-        }
     };
 
     const navItems = [
-        { name: 'Home', path: '/' },
+        { name: 'Home', path: './' },
         { name: 'About', path: '/about' },
         { name: 'Contact', path: '/contact' },
         { name: 'Blog', path: '/blog' },
@@ -44,17 +41,16 @@ function Header() {
     return (
         <section className='fixed bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50'>
             <header className="flex justify-between items-center px-8 py-4 w-full mx-auto relative max-w-[1200px]">
-                
                 {/* Logo */}
                 <div>
-                    <img src={logo} alt="Mpluse" className='h-11 w-auto' />
+                    <img src={logo} alt="Mpluse" className='h-11 w-full' />
                 </div>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex gap-8 items-center">
-                    <ul className='flex gap-8 items-center'>
+                    <ul className='flex gap-8 items-center '>
                         {navItems.map(({ name, path, subMenu }) => (
-                            <li key={name} className='relative group'>
+                            <li key={name} className='h-10 flex items-center cursor-pointer relative group'>
                                 <NavLink
                                     to={path}
                                     className={({ isActive }) =>
@@ -65,14 +61,13 @@ function Header() {
                                 >
                                     {name}
                                 </NavLink>
-
                                 {subMenu && (
-                                    <ul className="p-4 absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white shadow-lg rounded-md grid grid-cols-3 gap-6 min-w-[800px] z-20">
+                                    <ul className="p-4 absolute top-full opacity-90 left-[-700px] text-white bg-gray-800 shadow-md rounded hidden group-hover:grid grid-cols-3 gap-6 min-w-[1000px]">
                                         {subMenu.map((item) => (
-                                            <li key={item.name} className='p-2'>
+                                            <li key={item.name} className='p-6'>
                                                 <NavLink
                                                     to={item.path}
-                                                    className="block text-center capitalize hover:underline"
+                                                    className="flex justify-center capitalize"
                                                 >
                                                     {item.name}
                                                 </NavLink>
@@ -85,22 +80,20 @@ function Header() {
                     </ul>
                 </nav>
 
-                {/* Desktop Button */}
-                <div className="hidden lg:block">
-                    <Button className="border" text='Sign Up' />
-                </div>
+                {/* Button */}
+                <Button className="border" text='Sign Up' />
 
-                {/* Hamburger Icon Mobile */}
+                {/* Hamburger for Mobile */}
                 <div className="lg:hidden">
                     <button onClick={handleMenuToggle}>
-                        {toggle ? <IoClose className='text-3xl' /> : <GiHamburgerMenu className='text-3xl' />}
+                        {toggle ? <IoClose className='text-2xl' /> : <GiHamburgerMenu className='text-2xl' />}
                     </button>
                 </div>
 
                 {/* Mobile Menu */}
                 {toggle && (
-                    <div className="absolute top-full left-0 w-full bg-lime-200 p-6 lg:hidden z-40">
-                        <ul className='flex flex-col gap-4'>
+                    <div className="absolute top-full left-0 w-full bg-lime-200 p-4 lg:hidden">
+                        <ul className='flex flex-col gap-4 items-center'>
                             {navItems.map(({ name, path, subMenu }) => (
                                 <li key={name} className="w-full">
                                     <div
@@ -113,37 +106,32 @@ function Header() {
                                         }}
                                         className="flex justify-between items-center w-full px-4 py-2 cursor-pointer"
                                     >
-                                        {subMenu ? (
-                                            <span className="text-lg font-medium">{name}</span>
-                                        ) : (
-                                            <NavLink
-                                                to={path}
-                                                onClick={() => setToggle(false)}
-                                                className={({ isActive }) =>
-                                                    isActive
-                                                        ? 'text-red-500 font-semibold underline'
-                                                        : 'hover:text-red-500'
-                                                }
-                                            >
-                                                {name}
-                                            </NavLink>
-                                        )}
+                                        <NavLink
+                                            to={subMenu ? '#' : path}
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? 'text-red-500 font-semibold underline'
+                                                    : 'hover:text-red-500'
+                                            }
+                                        >
+                                            {name}
+                                        </NavLink>
                                         {subMenu && (
-                                            <span className="text-2xl">
+                                            <span className="text-xl">
                                                 {openSubmenu === name ? '-' : '+'}
                                             </span>
                                         )}
                                     </div>
 
-                                    {/* SubMenu Items Mobile */}
+                                    {/* SubMenu Items */}
                                     {subMenu && openSubmenu === name && (
-                                        <ul className="flex flex-col gap-2 mt-2 bg-green-200 rounded-md p-2">
+                                        <ul className="flex flex-col gap-2 mt-2 w-full bg-green-200 rounded-md p-2">
                                             {subMenu.map((item) => (
                                                 <li key={item.name}>
                                                     <NavLink
                                                         to={item.path}
                                                         onClick={() => setToggle(false)}
-                                                        className="capitalize block text-center py-2 hover:bg-green-300 rounded"
+                                                        className="capitalize text-center block w-full py-2 hover:bg-green-300 rounded"
                                                     >
                                                         {item.name}
                                                     </NavLink>
@@ -154,11 +142,6 @@ function Header() {
                                 </li>
                             ))}
                         </ul>
-
-                        {/* Mobile Button */}
-                        <div className="mt-6">
-                            <Button className="w-full" text='Sign Up' />
-                        </div>
                     </div>
                 )}
             </header>

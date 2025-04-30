@@ -1,4 +1,4 @@
-import gst from '/image/GST-01.png'
+import gst from '/image/GST-02.png'
 import HeroSectionUI from '../components/UI/HeroSectionUI'
 import GstBenefits from '../components/Project/project-1/GstBenifits'
 import GstStepsSection from '../components/Project/project-1/GstStepsSection'
@@ -15,16 +15,21 @@ const GST_Verification = () => {
         <>
             <HeroSectionUI
                 heading={
-                    <>Empowering Ideas,<br className="hidden md:block" /> Building the Future <span className='text-[#CF1C53]'>Mpluse.</span></>
+                    <>Instantly Verify GST <br className="hidden md:block" /> Numbers Securely. <span className='text-[#CF1C53]'></span></>
                 }
-                description="Welcome to Mpluse — where innovation meets purpose. We are committed to building meaningful fintech experiences that simplify complexity, empower businesses, and drive growth. With a focus on technology, trust, and impact, we deliver secure, scalable solutions that truly matter in today’s fast-evolving digital world."
+                description="Real-time GSTIN verification for merchant onboarding, fraud prevention, and compliance."
                 buttonText="Start Verify GST"
                 button_Text="Request API Access"
                 imageSrc={gst}
                 imageAlt="Mpluse Debit Card"
                 onButtonClick={() => console.log('Button clicked')}
+                sectionBackGroundColor='text-white bg-gradient-to-br from-[#0b122d] to-[#0b163d] h-screen lg:h-[80vh]'
+                companyLogo="hidden"
             />
-            <GstBenefits />
+            <GstBenefits 
+                cardbg="white"
+                cardPara="text-gary-500"
+            />
             <GstStepsSection />
             <AdvantagesSection />
             <IndustriesSection />

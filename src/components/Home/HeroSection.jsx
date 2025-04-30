@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import debit from '../../../public/image/mpluse-card.png'
 import HeroSectionUI from '../../components/UI/HeroSectionUI'
 
@@ -28,9 +28,9 @@ const HeroSection = () => {
 export default HeroSection
 
 
-const Section = styled.div `
-    background-color: #eaf0f9d6;
-`
+// const Section = styled.div `
+//     background-color: #eaf0f9d6;
+// `
 
 
     /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1) inset; */

@@ -4,7 +4,10 @@
 body, section{
     font-family: 'poppins' ,sans-serif;
     background-color: #eaf0f9d6;
-    box-sizing: border-box
+    box-sizing: border-box;
+}
+button{
+    box-sizing: border-box;
 }
 ul li{
     font-weight: 400;

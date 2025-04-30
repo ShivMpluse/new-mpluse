@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from '../../../public/image/788.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -8,6 +8,20 @@ import { NavLink } from 'react-router-dom';
 function Header() {
     const [toggle, setToggle] = useState(false);
     const [openSubmenu, setOpenSubmenu] = useState(null);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const handleMenuToggle = () => {
         setToggle(!toggle);
@@ -39,8 +53,11 @@ function Header() {
     ];
 
     return (
-        <section className='fixed bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50'>
+        <section className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+            ${scrolled ? 'bg-black text-white shadow-md' : 'bg-transparent text-black backdrop-blur-lg'}`}>
+            
             <header className="flex justify-between items-center px-8 py-4 w-full mx-auto relative max-w-[1200px]">
+                
                 {/* Logo */}
                 <div>
                     <img src={logo} alt="Mpluse" className='h-11 w-full' />
@@ -48,15 +65,15 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex gap-8 items-center">
-                    <ul className='flex gap-8 items-center '>
+                    <ul className='flex gap-8 items-center'>
                         {navItems.map(({ name, path, subMenu }) => (
-                            <li key={name} className='h-10 flex items-center cursor-pointer relative group'>
+                            <li key={name} className='relative group h-10 flex items-center cursor-pointer'>
                                 <NavLink
                                     to={path}
                                     className={({ isActive }) =>
                                         isActive
-                                            ? 'text-red-500 font-semibold border-b-2 border-red-500'
-                                            : 'hover:text-green-500'
+                                            ? `font-semibold border-b-2 ${scrolled ? 'text-yellow-400 border-yellow-400' : 'text-red-500 border-red-500'}`
+                                            : `${scrolled ? 'text-gray-300 hover:text-white' : 'hover:text-green-500'}`
                                     }
                                 >
                                     {name}
@@ -67,7 +84,7 @@ function Header() {
                                             <li key={item.name} className='p-6'>
                                                 <NavLink
                                                     to={item.path}
-                                                    className="flex justify-center capitalize"
+                                                    className="flex justify-center capitalize hover:text-yellow-400"
                                                 >
                                                     {item.name}
                                                 </NavLink>
@@ -81,7 +98,7 @@ function Header() {
                 </nav>
 
                 {/* Button */}
-                <Button className="border" text='Sign Up' />
+                <Button className="border text-white" text='Sign Up' />
 
                 {/* Hamburger for Mobile */}
                 <div className="lg:hidden">
@@ -92,7 +109,7 @@ function Header() {
 
                 {/* Mobile Menu */}
                 {toggle && (
-                    <div className="absolute top-full left-0 w-full bg-lime-200 p-4 lg:hidden">
+                    <div className={`absolute top-full left-0 w-full ${scrolled ? 'bg-black text-white' : 'bg-white text-black'} p-4 lg:hidden`}>
                         <ul className='flex flex-col gap-4 items-center'>
                             {navItems.map(({ name, path, subMenu }) => (
                                 <li key={name} className="w-full">
@@ -110,8 +127,8 @@ function Header() {
                                             to={subMenu ? '#' : path}
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? 'text-red-500 font-semibold underline'
-                                                    : 'hover:text-red-500'
+                                                    ? `${scrolled ? 'text-yellow-400' : 'text-red-500'} font-semibold underline`
+                                                    : `${scrolled ? 'hover:text-gray-200' : 'hover:text-red-500'}`
                                             }
                                         >
                                             {name}

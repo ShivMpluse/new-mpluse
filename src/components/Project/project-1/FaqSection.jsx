@@ -23,7 +23,11 @@ const faqData = [
     },
 ];
 
-const FaqSection = () => {
+const FaqSection = ({
+    mainbg
+}) => {
+
+
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleIndex = (index) => {
@@ -31,32 +35,34 @@ const FaqSection = () => {
     };
 
     return (
-        <section className="py-16 px-4 max-w-[1200px] mx-auto">
-            <h2 className="text-2xl font-bold text-center text-slate-900 mb-10">GST API FAQs</h2>
+        <div className={`${mainbg}`}>
+            <section className="py-16 px-4 max-w-[1200px] mx-auto">
+                <h2 className="text-2xl font-bold text-center  mb-10">GST API FAQs</h2>
 
-            <ul className="space-y-4">
-                {faqData.map((item, index) => (
-                    <li
-                        key={index}
-                        className="bg-white rounded-md shadow-md"
-                    >
-                        <button
-                            onClick={() => toggleIndex(index)}
-                            className="w-full text-left px-6 py-4 font-medium text-slate-800 flex justify-between items-center"
-                            >
-                            <span>{item.question}</span>
-                            <span>{openIndex === index ? '−' : '+'}</span>
-                        </button>
+                <ul className="space-y-4">
+                    {faqData.map((item, index) => (
+                        <li
+                            key={index}
+                            className=" rounded-md border border-pink-500/40 shadow-md hover:shadow-xl shadow-pink-500/40 bg-gradient-to-br from-[#0b122d] to-[#0b163d]"
+                        >
+                            <button
+                                onClick={() => toggleIndex(index)}
+                                className={`w-full text-left px-6 py-4 font-medium text-white flex justify-between items-center `}
+                                >
+                                <span>{item.question}</span>
+                                <span>{openIndex === index ? '−' : '+'}</span>
+                            </button>
 
-                        {openIndex === index && (
-                            <div className="px-6 pb-4 text-slate-600 text-sm ">
-                                {item.answer}
-                            </div>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </section>
+                            {openIndex === index && (
+                                <div className="px-6 pb-4  text-sm ">
+                                    {item.answer}
+                                </div>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </div>
     );
 };
 

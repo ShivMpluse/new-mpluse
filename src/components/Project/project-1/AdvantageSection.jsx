@@ -29,32 +29,39 @@ const advantages = [
 ];
 
 
+const AdvantagesSection = ({
+    mainbg,
+    mainHeading,
+    cardDesign
+}) => {
 
-const AdvantagesSection = () => {
+
     return (
-        <section className="max-w-[1200px] mx-auto py-16 px-6">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-                Core Advantages
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                {advantages.map((adv, index) => (
-                <div
-                    key={index}
-                    className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition"
-                >
-                    <div
-                    className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-2xl ${adv.bgColor}`}
-                    >
-                    {adv.icon}
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                    {adv.title}
-                    </h3>
-                    <p className="mt-2 text-gray-600 text-sm">{adv.description}</p>
-                </div>
-                ))}
-            </div>
-        </section>
+        <div class={`${mainbg}`}>
+            <section className={`max-w-[1200px] mx-auto py-16 px-6 ${mainbg}`}>
+                <h2 className={`text-3xl font-bold text-center text-gray-900 mb-12 ${mainHeading}`}>
+                    Core Advantages
+                </h2>
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    {advantages.map((adv, index) => (
+                        <li
+                            key={index}
+                            className={`${cardDesign}`}
+                        >
+                            <div
+                            className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-2xl ${adv.bgColor}`}
+                            >
+                            {adv.icon}
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-gray-900">
+                            {adv.title}
+                            </h3>
+                            <p className="mt-2  text-sm">{adv.description}</p>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </div>
     );
 };
 

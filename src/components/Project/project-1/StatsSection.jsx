@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const StatsSection = () => {
+const StatsSection = ({
+    mainbg,
+    cardDesign
+}) => {
+
     const statsData = [
         {
             label: 'GSTINs Verified',
@@ -49,30 +53,32 @@ const StatsSection = () => {
     }, []);
 
     return (
-        <div className="max-w-[1200px] mx-auto py-16 text-center">
-            <h2 className="text-2xl font-bold text-slate-900 mb-10">Reliable at Scale</h2>
+        <div class={`${mainbg}`}>
+            <section className="max-w-[1200px] mx-auto py-16 text-center">
+                <h2 className="text-2xl font-bold mb-10">Reliable at Scale</h2>
 
-            <div className="flex flex-wrap justify-center gap-6">
-                {statsData.map((stat, index) => (
-                <div
-                    key={index}
-                    className="bg-white px-10 py-8 rounded-xl shadow-md min-w-[220px]"
-                >
-                    <div className={`text-3xl font-bold ${stat.color}`}>
-                    {stat.isAnimated ? (
-                        <>
-                        {stat.target >= 1000000
-                            ? Math.floor(counts[index] / 1000000) + stat.suffix
-                            : counts[index] + stat.suffix}
-                        </>
-                    ) : (
-                        stat.staticValue
-                    )}
-                    </div>
-                    <div className="mt-2 text-slate-600 text-sm">{stat.label}</div>
-                </div>
-                ))}
-            </div>
+                <ul className="flex flex-wrap justify-center gap-6">
+                    {statsData.map((stat, index) => (
+                        <li
+                            key={index}
+                            className={`${cardDesign} min-w-[220px]`}
+                        >
+                            <div className={`text-3xl font-bold ${stat.color}`}>
+                                {stat.isAnimated ? (
+                                    <>
+                                    {stat.target >= 1000000
+                                        ? Math.floor(counts[index] / 1000000) + stat.suffix
+                                        : counts[index] + stat.suffix}
+                                    </>
+                                ) : (
+                                    stat.staticValue
+                                )}
+                            </div>
+                            <div className="mt-2  text-sm">{stat.label}</div>
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </div>
     );
 };

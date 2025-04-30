@@ -11,6 +11,11 @@ import FaqSection from '../components/Project/project-1/FaqSection'
 import Instantly from '../components/Project/project-1/Instantly'
 
 const GST_Verification = () => {
+
+    const sectionbgGradient = `text-white bg-[#0b122d] `
+    const cardDesign = "shadow-pink-500/70 border border-pink-500/20 rounded-lg shadow-md p-6 max-w-sm mx-auto hover:shadow-xl animation-all duration-500 hover:scale-105"
+    const heading = "text-white"
+
     return (
         <>
             <HeroSectionUI
@@ -26,17 +31,43 @@ const GST_Verification = () => {
                 sectionBackGroundColor='text-white bg-gradient-to-br from-[#0b122d] to-[#0b163d] h-screen lg:h-[80vh]'
                 companyLogo="hidden"
             />
-            <GstBenefits 
-                cardbg="white"
-                cardPara="text-gary-500"
+            <GstBenefits
+                sectionbg={sectionbgGradient} 
+                cardPara="text-gray-300" 
+                mainHeading="text-white"
             />
-            <GstStepsSection />
-            <AdvantagesSection />
-            <IndustriesSection />
-            <ApiIntegrationComponent />
-            <ComplianceBadges />
-            <StatsSection />
-            <FaqSection />
+            <GstStepsSection 
+                mainbg={sectionbgGradient}
+                card={`${cardDesign} ${sectionbgGradient} `}
+                cardTitle="text-white"
+                cardDesign={cardDesign}
+            />
+            <AdvantagesSection 
+                mainbg={sectionbgGradient}
+                mainHeading="text-white"
+                cardDesign={cardDesign}
+            />
+            <IndustriesSection 
+                mainbg={sectionbgGradient}
+                mainHeading={heading}
+                cardDesign={cardDesign}
+            />
+            <ApiIntegrationComponent 
+                mainbg={sectionbgGradient}
+                cardDesign={cardDesign}
+                APIcard=" bg-[#0b0136]"
+            />
+            <ComplianceBadges 
+                mainbg={sectionbgGradient}
+                cardDesign={cardDesign}
+            />
+            <StatsSection 
+                mainbg={sectionbgGradient}
+                cardDesign={cardDesign}
+            />
+            <FaqSection 
+                mainbg={sectionbgGradient}
+            />
             <Instantly />
         </>
         
@@ -44,3 +75,5 @@ const GST_Verification = () => {
 }
 
 export default GST_Verification
+
+// -gradient-to-br from-[#0b122d] to-[#0b163d]

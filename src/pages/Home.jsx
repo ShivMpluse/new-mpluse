@@ -9,14 +9,14 @@ import OurWork from '../components/Home/OurWork'
 
 const Home = () => {
     return (
-        <section className='bg-[#fff] text-black'>
+        <>
             <HeroSection />
             <Howwork />
             <OurWork />
             <WhyMpluse />
             <Works />
             <Developer />
-        </section>
+        </>
     )
 }
 

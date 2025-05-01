@@ -36,8 +36,8 @@ function Header() {
             name: 'Product',
             path: '/product',
             subMenu: [
-                { name: 'GST verification API', path: '/product/GST-verification' },
-                { name: 'Product 2', path: '/product/product2' },
+                { name: 'GST verification', path: '/product/GST-verification' },
+                { name: 'PAN verification', path: '/product/PAN-verification' },
                 { name: 'Product 3', path: '/product/product3' },
                 { name: 'Product 4', path: '/product/product4' },
                 { name: 'Product 5', path: '/product/product5' },

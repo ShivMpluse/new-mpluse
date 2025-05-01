@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSectionUI from '../components/UI/HeroSectionUI'
 import verify from '/image/GST.png'
-import GstBenefits from '../components/Project/project-1/GstBenifits'
+import GstBenefits from '../components/Project/GST_Verification/GstBenifits'
 
 const Product = () => {
     return (

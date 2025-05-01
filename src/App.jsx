@@ -10,6 +10,7 @@ import PrivacyPolicy from "./components/CompanyInfo/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import Product from "./pages/Product";
 import GST_Verification from "./pages/GST_Verification";
+import PAN_Verification from "./pages/PAN_Verification";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/product/GST-verification",
         element: <GST_Verification />
+      }, 
+      {
+        path: "/product/PAN-verification",
+        element: <PAN_Verification />
       },
 
       {

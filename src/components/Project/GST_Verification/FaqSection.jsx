@@ -34,6 +34,8 @@ const FaqSection = ({
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    const faqCard = "duration-300 hover:scale-102 rounded-md border border-pink-500/40 shadow-md hover:shadow-xl shadow-pink-500/40 bg-gradient-to-br from-[#0b122d] to-[#0b163d]"
+
     return (
         <div className={`${mainbg}`}>
             <section className="py-16 px-4 max-w-[1200px] mx-auto">
@@ -43,7 +45,7 @@ const FaqSection = ({
                     {faqData.map((item, index) => (
                         <li
                             key={index}
-                            className=" rounded-md border border-pink-500/40 shadow-md hover:shadow-xl shadow-pink-500/40 bg-gradient-to-br from-[#0b122d] to-[#0b163d]"
+                            className={`${faqCard} `}
                         >
                             <button
                                 onClick={() => toggleIndex(index)}

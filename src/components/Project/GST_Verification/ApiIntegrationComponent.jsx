@@ -28,6 +28,9 @@ const ApiIntegrationComponent = ({
 
     const text = "Our RESTful APIs are designed to be easy to integrate with minimal code. Get started in minutes with comprehensive documentation and sandbox access."
 
+    const codeCard = 'text-[#a5f3fc] py-18 px-16 rounded-lg border border-pink-500/40shadow-md shadow-pink-500/40 hover:shadow-xl duration-500'
+
+
     return (
         <div class={`${mainbg}`}>
             <section className='max-w-[1200px] mx-auto p-4 py-10' >
@@ -41,7 +44,7 @@ const ApiIntegrationComponent = ({
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10 p-4 ' >
                     <div class="flex flex-col gap-8 ">
-                        <div className={`text-[#a5f3fc] py-18 px-16 rounded-lg ${APIcard}`}>
+                        <div className={` ${codeCard} ${APIcard}`}>
                             <p><strong className={`text-[#facc15]`}>GET</strong> <span className='text-[#facc15]'>https://api.mpluse.com/v1/gst/verify</span></p>
                             <p><strong>Headers:</strong><br />
                                 Authorization: Bearer YOUR_API_KEY<br />

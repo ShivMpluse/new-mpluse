@@ -1,14 +1,14 @@
 import gst from '/image/GST-02.png'
 import HeroSectionUI from '../components/UI/HeroSectionUI'
-import GstBenefits from '../components/Project/project-1/GstBenifits'
-import GstStepsSection from '../components/Project/project-1/GstStepsSection'
-import AdvantagesSection from '../components/Project/project-1/AdvantageSection'
-import IndustriesSection from '../components/Project/project-1/IndustriesSection'
-import ApiIntegrationComponent from '../components/Project/project-1/ApiIntegrationComponent'
-import ComplianceBadges from '../components/Project/project-1/ComplianceBadges'
-import StatsSection from '../components/Project/project-1/StatsSection'
-import FaqSection from '../components/Project/project-1/FaqSection'
-import Instantly from '../components/Project/project-1/Instantly'
+import GstBenefits from '../components/Project/GST_Verification/GstBenifits'
+import GstStepsSection from '../components/Project/GST_Verification/GstStepsSection'
+import AdvantagesSection from '../components/Project/GST_Verification/AdvantageSection'
+import IndustriesSection from '../components/Project/GST_Verification/IndustriesSection'
+import ApiIntegrationComponent from '../components/Project/GST_Verification/ApiIntegrationComponent'
+import ComplianceBadges from '../components/Project/GST_Verification/ComplianceBadges'
+import StatsSection from '../components/Project/GST_Verification/StatsSection'
+import FaqSection from '../components/Project/GST_Verification/FaqSection'
+import Instantly from '../components/Project/GST_Verification/Instantly'
 
 const GST_Verification = () => {
 

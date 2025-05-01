@@ -41,6 +41,7 @@ const GST_Verification = () => {
                 card={`${cardDesign} ${sectionbgGradient} `}
                 cardTitle="text-white"
                 cardDesign={cardDesign}
+                heading_Text="Simple 3-Step Process"
             />
             <AdvantagesSection 
                 mainbg={sectionbgGradient}

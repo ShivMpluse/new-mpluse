@@ -29,8 +29,8 @@ const GstStepsSection = ({
     card,
     iconbg,
     cardTitle,
-    cardDesign
-
+    cardDesign,
+    heading_Text
 
 }) => {
 
@@ -38,7 +38,7 @@ const GstStepsSection = ({
             <main className={`w-full ${mainbg}`}>
                 <section className={`py-16 max-w-[1200px] mx-auto text-center`}>
                     <h2 className={`text-3xl font-bold  mb-12 ${mainHeading}`}>
-                        Simple 3-Step Process
+                        {heading_Text}
                     </h2>
                     <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
                         {steps.map((step, index) => (

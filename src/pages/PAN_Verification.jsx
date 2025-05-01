@@ -1,10 +1,11 @@
 import pan from '/image/pan.png'
 import HeroSectionUI from '../components/UI/HeroSectionUI'
 import WhyPanVerificationCritical from '../components/Project/PAN_Verification/WhyPanVerificationCritical'
+import VerificationSteps from '../components/Project/PAN_Verification/Veification_Steps'
 
 const PAN_Verification = () => {
 
-    const sectionbgGradient = `text-white bg-[#0b122d] `
+    const mainbg = `text-white bg-[#0b122d] `
     const cardDesign = "shadow-pink-500/70 border border-pink-500/20 rounded-lg shadow-md p-6 max-w-sm mx-auto hover:shadow-xl animation-all duration-500 hover:scale-105"
     const heading = "text-white"
 
@@ -24,9 +25,14 @@ const PAN_Verification = () => {
                 companyLogo="hidden"
             />
             <WhyPanVerificationCritical 
-                mainbg={sectionbgGradient}
+                mainbg={mainbg}
                 mainHeading={heading}
                 cardDesign={cardDesign}
+            />
+            <VerificationSteps 
+                mainbg={mainbg}
+                cardDesign={cardDesign}
+                heading_Text="Verification in 3 Simple Steps"
             />
         </>
     )

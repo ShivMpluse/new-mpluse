@@ -2,6 +2,10 @@ import pan from '/image/pan.png'
 import HeroSectionUI from '../components/UI/HeroSectionUI'
 import WhyPanVerificationCritical from '../components/Project/PAN_Verification/WhyPanVerificationCritical'
 import VerificationSteps from '../components/Project/PAN_Verification/Veification_Steps'
+import PAN_API_Highlight from '../components/Project/PAN_Verification/PAN_API_Highlight'
+import Perfect from '../components/Project/PAN_Verification/Perfect'
+import EasyIntegration from '../components/Project/PAN_Verification/Easy_Integration'
+import CertifiedSecure from '../components/Project/PAN_Verification/CertifiedSecure'
 
 const PAN_Verification = () => {
 
@@ -34,6 +38,13 @@ const PAN_Verification = () => {
                 cardDesign={cardDesign}
                 heading_Text="Verification in 3 Simple Steps"
             />
+            <PAN_API_Highlight 
+                mainbg={mainbg}
+                cardDesign={cardDesign}
+            />
+            <Perfect />
+            <EasyIntegration />
+            <CertifiedSecure />
         </>
     )
 }

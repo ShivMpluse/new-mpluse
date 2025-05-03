@@ -13,6 +13,7 @@ const ContactHero = () => {
                 }
                 description="Accept payments, send instant payouts, and manage transactions effortlessly with Mpluse. Our smart, secure, and scalable platform simplifies digital finance, helping businesses operate faster, better, and with complete control."
                 buttonText="Open Account"
+                button_Text="Sign-Up"
                 imageSrc={debit}
                 imageAlt="Mpluse Debit Card"
                 onButtonClick={() => console.log('Button clicked')}

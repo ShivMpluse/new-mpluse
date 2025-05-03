@@ -11,11 +11,13 @@ import Blog from "./pages/Blog";
 import Product from "./pages/Product";
 import GST_Verification from "./pages/GST_Verification";
 import PAN_Verification from "./pages/PAN_Verification";
+import ErrorPage from "./components/layout/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <AppLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

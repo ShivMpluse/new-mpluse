@@ -69,7 +69,9 @@ const GST_Verification = () => {
             <FaqSection 
                 mainbg={sectionbgGradient}
             />
-            <Instantly />
+            <Instantly 
+                mainHeading="Verify GST Numbers Instantly!"
+            />
         </>
         
     )

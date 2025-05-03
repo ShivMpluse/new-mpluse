@@ -24,14 +24,17 @@ const certifications = [
 
 const CertifiedSecure = () => {
   return (
-    <div class="bg-[#edf5f9]">
-      <section className="max-w-[1200px] mx-auto py-16 px-4 md:px-20  text-center">
+    <div class="bg-[#d6eefa] py-12">
+      <section className="max-w-[1200px] mx-auto  px-4 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-10">Certified & Secure</h2>
-        <ul className="grid gap-6 md:grid-cols-3">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {certifications.map((item, index) => (
             <li
               key={index}
-              className="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition"
+              className="bg-gray-50 hover:shadow-red-700 shadow-md rounded-xl p-6 hover:shadow-2xl transition hover:scale-105 duration-500 "
+              style={{
+                clipPath: "polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%)"
+              }}
             >
               <div className={`w-14 h-14 flex items-center justify-center rounded-full mx-auto mb-4 ${item.bg}`}>
                 {item.icon}

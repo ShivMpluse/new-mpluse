@@ -6,6 +6,9 @@ import PAN_API_Highlight from '../components/Project/PAN_Verification/PAN_API_Hi
 import Perfect from '../components/Project/PAN_Verification/Perfect'
 import EasyIntegration from '../components/Project/PAN_Verification/Easy_Integration'
 import CertifiedSecure from '../components/Project/PAN_Verification/CertifiedSecure'
+import Performance from '../components/Project/PAN_Verification/Performance'
+import FAQ from '../components/Project/PAN_Verification/FAQ'
+import Instantly from '../components/Project/GST_Verification/Instantly'
 
 const PAN_Verification = () => {
 
@@ -45,6 +48,11 @@ const PAN_Verification = () => {
             <Perfect />
             <EasyIntegration />
             <CertifiedSecure />
+            <Performance />
+            <FAQ />
+            <Instantly 
+                mainHeading="Start Verifying PAN Cards Now!"
+            />
         </>
     )
 }

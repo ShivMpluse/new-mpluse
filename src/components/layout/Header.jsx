@@ -38,7 +38,7 @@ function Header() {
             subMenu: [
                 { name: 'GST verification', path: '/product/GST-verification' },
                 { name: 'PAN verification', path: '/product/PAN-verification' },
-                { name: 'Product 3', path: '/product/product3' },
+                { name: 'Banking Service', path: '/product/Banking-service' },
                 { name: 'Product 4', path: '/product/product4' },
                 { name: 'Product 5', path: '/product/product5' },
                 { name: 'Product 6', path: '/product/product6' },

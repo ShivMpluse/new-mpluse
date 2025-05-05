@@ -12,6 +12,7 @@ import Product from "./pages/Product";
 import GST_Verification from "./pages/GST_Verification";
 import PAN_Verification from "./pages/PAN_Verification";
 import ErrorPage from "./components/layout/ErrorPage";
+import Banking_Service from "./pages/Banking_Service";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/product/PAN-verification",
         element: <PAN_Verification />
+      }, 
+      {
+        path: "/product/Banking-service",
+        element: <Banking_Service />
       },
 
       {

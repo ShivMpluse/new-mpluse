@@ -39,7 +39,7 @@ const features = [
 const Industries = ({mainbg, cardDesign}) => {
     return (
         <div className={`${mainbg} py-12`}>
-            <section class="max-w-[1200px] mx-auto">
+            <section class="max-w-[1200px] mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                         Industries We Empower

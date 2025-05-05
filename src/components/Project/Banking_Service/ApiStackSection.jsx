@@ -9,7 +9,7 @@ const apis = [
 const ApiStackSection = () => {
     return (
         <div class="bg-[#ebeafc] ">
-            <section className="py-20 max-w-[1200px] mx-auto">
+            <section className="py-20 max-w-[1200px] mx-auto px-4">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-4">
                     {/* Left Text */}
                     <div>

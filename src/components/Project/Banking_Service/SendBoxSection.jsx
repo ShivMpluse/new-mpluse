@@ -3,7 +3,7 @@ import sandboxImage from "/image/pc.png"; // image ko sahi path pe daalna hoga
 const SendboxSection = () => {
     return (
         <section className="bg-white py-20 ">
-            <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between">
+            <div className="max-w-[1200px] px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between">
                 
                 {/* Left Content */}
                 <div className="">

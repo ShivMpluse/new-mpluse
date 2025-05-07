@@ -13,6 +13,8 @@ import GST_Verification from "./pages/GST_Verification";
 import PAN_Verification from "./pages/PAN_Verification";
 import ErrorPage from "./components/layout/ErrorPage";
 import Banking_Service from "./pages/Banking_Service";
+import KYC_Onboarding from "./pages/KYC_Onboarding";
+import Upi from "./components/Project/UPI_Payment_Solution/Upi";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
       {
         path: "/product/Banking-service",
         element: <Banking_Service />
+      },  
+      {
+        path: "/product/UPI-payment-solution",
+        element: <Upi />
+      },
+      {
+        path: "/product/kyc-onboarding",
+        element: <KYC_Onboarding />
       },
 
       {

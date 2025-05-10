@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import logo from '../../../public/image/788.png';
+import logoDark from '../../../public/image/788.png';
+import logoLight from '../../../public/image/logo-full2.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import Button from '../UI/Button';
@@ -60,7 +61,7 @@ function Header() {
                 
                 {/* Logo */}
                 <div>
-                    <img src={logo} alt="Mpluse" className='h-11 w-full' />
+                    <img src={scrolled ? logoLight : logoDark} alt="Mpluse" className='h-11 w-full' />
                 </div>
 
                 {/* Desktop Navigation */}
@@ -98,7 +99,10 @@ function Header() {
                 </nav>
 
                 {/* Button */}
-                <Button className="border text-white" text='Sign Up' />
+                <Button
+                    className={`${scrolled ? 'bg-white text-black border-white' : 'bg-black text-white border-black'} transition-all duration-300`}
+                    text='Sign Up'
+                />
 
                 {/* Hamburger for Mobile */}
                 <div className="lg:hidden">
@@ -107,9 +111,9 @@ function Header() {
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Menu with Scroll */}
                 {toggle && (
-                    <div className={`absolute top-full left-0 w-full ${scrolled ? 'bg-black text-white' : 'bg-white text-black'} p-4 lg:hidden`}>
+                    <div className={`absolute top-full left-0 w-[50%] ${scrolled ? 'bg-black text-white' : 'bg-white text-black'} p-4 lg:hidden max-h-[90vh] overflow-y-auto rounded-b-md`}>
                         <ul className='flex flex-col gap-4 items-center'>
                             {navItems.map(({ name, path, subMenu }) => (
                                 <li key={name} className="w-full">
@@ -142,7 +146,7 @@ function Header() {
 
                                     {/* SubMenu Items */}
                                     {subMenu && openSubmenu === name && (
-                                        <ul className="flex flex-col gap-2 mt-2 w-full bg-green-200 rounded-md p-2">
+                                        <ul className="flex flex-col gap-2 mt-2 w-full bg-white text-black rounded-md p-2 justify-start">
                                             {subMenu.map((item) => (
                                                 <li key={item.name}>
                                                     <NavLink

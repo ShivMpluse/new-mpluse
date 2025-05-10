@@ -2,17 +2,17 @@ import { Star } from 'lucide-react';
 import Button from '../../UI/Button';
 
 const testimonial = {
-  title: 'How FinCredit NBFC reduced onboarding time by 73%',
-  stats: [
-    'Reduced KYC processing time from 48 hours to 13 minutes',
-    'Decreased customer drop-off rate by 42%',
-    'Improved fraud detection by 67%',
-  ],
-  name: 'Rajiv Sharma',
-  position: 'CTO, FinCredit NBFC',
-  quote:
-    "Implementing Mpluse’s KYC solution transformed our customer onboarding experience. What used to take days now happens in minutes, with better security and compliance. Our team can focus on core lending activities instead of document verification.",
-  rating: 5,
+    title: 'How FinCredit NBFC reduced onboarding time by 73%',
+    stats: [
+        'Reduced KYC processing time from 48 hours to 13 minutes',
+        'Decreased customer drop-off rate by 42%',
+        'Improved fraud detection by 67%',
+    ],
+    name: 'Rajiv Sharma',
+    position: 'CTO, FinCredit NBFC',
+    quote:
+        "Implementing Mpluse’s KYC solution transformed our customer onboarding experience. What used to take days now happens in minutes, with better security and compliance. Our team can focus on core lending activities instead of document verification.",
+    rating: 5,
 };
 
 export default function ClientSuccessStory() {

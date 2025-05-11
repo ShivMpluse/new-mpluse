@@ -5,7 +5,7 @@ import Why from '../components/Project/UPI_Payment_Solution/Why'
 import UPI_Steps from '../components/Project/UPI_Payment_Solution/UPI_Steps'
 import UpiAdvantages from '../components/Project/UPI_Payment_Solution/UpiAdvantages'
 import BestSuited from '../components/Project/UPI_Payment_Solution/BestSuited'
-import ApiIntegration from '../components/Project/UPI_Payment_Solution/ApiIntegration'
+// import ApiIntegration from '../components/Project/UPI_Payment_Solution/ApiIntegration'
 import CertifiedAndSecure from '../components/Project/UPI_Payment_Solution/CertifiedSecurity'
 import Trusted from '../components/Project/UPI_Payment_Solution/Trusted'
 import FAQ from '../components/Project/UPI_Payment_Solution/FAQ'
@@ -31,7 +31,7 @@ const UPI_Payment_Solution = () => {
             <UPI_Steps />
             <UpiAdvantages />
             <BestSuited />
-            <ApiIntegration />
+            {/* <ApiIntegration /> */}
             <CertifiedAndSecure />
             <Trusted />
             <FAQ />

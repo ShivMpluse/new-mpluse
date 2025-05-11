@@ -1,4 +1,4 @@
-import api from '../../../assets/image/api-integration.png'
+import api from '/src/assets/image/api-integration.png'
 import Button from '../../UI/Button';
 
 export default function ApiIntegration() {

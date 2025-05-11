@@ -1,93 +1,118 @@
-import logo from '../../../public/image/logo-full2.png'
+import logo from '../../../public/image/logo-full2.png';
 import { IoLogoInstagram, IoLogoFacebook, IoLogoWhatsapp } from "react-icons/io5";
 import { BsTwitterX } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaPhoneAlt, FaRegAddressBook } from "react-icons/fa";
+import { MdOutlineMail, MdCorporateFare } from "react-icons/md";
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { MdOutlineMail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaRegAddressBook } from "react-icons/fa";
-import { MdCorporateFare } from "react-icons/md";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
 
     const handleSubscribe = () => {
-        // Yaha aap API call ya toast add kar sakte ho
         alert(`Thanks for subscribing: ${email}`);
         setEmail("");
     };
 
-
-    let description = `Mpluse Fintech Private Limited is a technology platform that provides API-based financial infrastructure and white-labeled solutions in partnership with licensed banks, NBFCs, and payment aggregators. We are not a bank, NBFC, or payment aggregator and do not hold or claim to hold any license from RBI, NPCI, or any regulatory authority. All financial services and settlements enabled through our platform are operated solely by our regulated partners. Mpluse does not hold end-user funds and acts strictly as a technology facilitator.` 
-    const registeredAddress = `119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025`
-    const corporateAddress = ` A45/1 Aashray 1 Sulabh Awas Behaind Of Janeshwar Mishra Park Gomtinager Extention Sector 1, 226010`
-
-
-    const footerItems = [
-        { name: 'Home', path: './' },
-        { name: 'About', path: '/about' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Blog', path: '/blog' },
+    const footerLinks = [
         { name: 'Refund & Policy', path: '/refund-policy' },
-        { name: 'term & conditions', path: '/terms-and-conditions' },
-        { name: 'privacy policy', path: '/privacy-Policy' }
+        { name: 'Terms & Conditions', path: '/terms-and-conditions' },
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'product-1', path: '/product-1' }
     ];
 
+    const contactInfo = [
+        {
+            icon: <MdOutlineMail className="text-red-400 text-2xl" />,
+            label: "Email",
+            value: "support@mpluase.in"
+        },
+        {
+            icon: <FaPhoneAlt className="text-green-400 text-xl" />,
+            label: "Phone",
+            value: "011-69046382"
+        },
+        {
+            icon: <FaRegAddressBook className="text-blue-400 text-2xl" />,
+            label: "Registered Address",
+            value: "119, Lane Number 11, New Defence Colony Uttaretiya Lucknow 226025"
+        },
+        {
+            icon: <MdCorporateFare className="text-green-400 text-2xl" />,
+            label: "Corporate Address",
+            value: "A45/1 Aashray 1 Sulabh Awas Behind Of Janeshwar Mishra Park Gomtinagar Extension Sector 1, 226010"
+        }
+    ];
+
+    const product = [
+        { name: 'GST verification', path: '/product/GST-verification' },
+        { name: 'PAN verification', path: '/product/PAN-verification' },
+        { name: 'Banking Service', path: '/product/Banking-service' },
+        { name: 'KYC & Onboarding', path: '/product/kyc-onboarding' },
+        { name: 'UPI Payment Solution', path: '/product/UPI-payment-solution' },
+    ]
 
     return (
-        <section className='w-full z-50 '>
-            <footer className='bg-[#000000] text-white'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 max-w-[1200px] mx-auto">
-                    <div className="img mb-2 flex-col justify-center px-4 ">
-                        <img src={logo} alt="mpluse" className='h-18 w-33 object-contain' />
-                        <p className="text-justify capitalize text-xs mt-2 text-[#CDCDCD] text-[14px]">{description}</p>
-                        <div className="flex gap-4 text-3xl py-4 justify-evenly">
-                        <NavLink to="https://instagram.com/mpluseltd" target='_blank'><IoLogoInstagram className='text-red-500' /></NavLink>
-                        <NavLink to="https://facebook.com/mpluseltd" target='_blank'><IoLogoFacebook className='text-blue-500' /></NavLink>
-                        <NavLink to="https://whatsapp.com/channel/0029VarVa5yHQbS2kGZiJg2F" target='_blank'><IoLogoWhatsapp className='text-green-500' /></NavLink>
-                        <NavLink to="https://twitter.com/mpluseltd" target='_blank'><BsTwitterX className='text-blue-500' /></NavLink>
-                        <NavLink to="https://linkedin.com/company/mpluseltd" target='_blank'><FaLinkedin className='text-blue-500' /></NavLink>
-                        </div>
-                    </div> 
-                    
-                    <div className='md:border-t-0 py-4 border-[#777676] flex justify-center '>
-                        <ul>
-                            <h2 className='text-lg font-semibold mb-2'>Pages</h2>
-                            {footerItems.map((elem) =>(
-                                <li key={elem.index}>
-                                    <ul className='list-disk'>
-                                        <li><NavLink to={elem.path}>{elem.name}</NavLink></li>
-                                    </ul>
-                                </li>
-                            ))}
-                        </ul>
+        <footer className="bg-black text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 max-w-[1200px] mx-auto">
+                {/* Logo & Description */}
+                <div>
+                    <NavLink to='/'>
+                        <img src={logo} alt="mpluse" className="h-18 w-33 object-contain" />
+                    </NavLink>
+                    <p className="text-sm mt-2 text-[#CDCDCD] text-justify">
+                        Mpluse Fintech Pvt Ltd is a tech platform offering API-based fintech infra and white-labeled solutions in collaboration with regulated partners. We are not a bank/NBFC and do not hold any regulatory license.
+                    </p>
+                    <div className="flex gap-4 text-2xl mt-4">
+                        <NavLink to="https://instagram.com/mpluseltd" target="_blank"><IoLogoInstagram className="text-red-500" /></NavLink>
+                        <NavLink to="https://facebook.com/mpluseltd" target="_blank"><IoLogoFacebook className="text-blue-500" /></NavLink>
+                        <NavLink to="https://whatsapp.com/channel/0029VarVa5yHQbS2kGZiJg2F" target="_blank"><IoLogoWhatsapp className="text-green-500" /></NavLink>
+                        <NavLink to="https://twitter.com/mpluseltd" target="_blank"><BsTwitterX className="text-blue-500" /></NavLink>
+                        <NavLink to="https://linkedin.com/company/mpluseltd" target="_blank"><FaLinkedin className="text-blue-500" /></NavLink>
                     </div>
-                    <div className='border-t-3 md:border-t-0 py-4 border-[#777676] pl-4 '>
-                        <div className='border-t-3 md:border-t-0 py-4  border-[#777676] pl-4'>
-                            <ul className='flex flex-col gap-2'>
-                                <h2 className='text-lg font-semibold mb-2'>Get In Touch</h2>
-                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdOutlineMail className='text-red-400 text-2xl capitalize' /> Email : </span> support@mpluase.in</li>
-                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span> 011-69046382 </li>
-                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><FaRegAddressBook className='text-blue-400 text-3xl capitalize' /> registered Address : </span> {registeredAddress} </li>
-                                <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2 capitalize'><MdCorporateFare className='text-green-400 text-4xl capitalize' /> corporate address : </span> {corporateAddress} </li>
-                                {/* <li className='flex text-sm text-[#CDCDCD] mb-1'><span className='font-seminbold text-white flex gap-2'><FaPhoneAlt className='text-green-400 text-xl capitalize' /> Phone : </span></li> */}
-                            </ul>
-                        </div>
+                </div>
 
-                        <div className="p-2 flex flex-col space-y-3 ">
-                            <h2 className="text-2xl font-semibold mb-2 capitalize">Stay Updated</h2>
-                            <p className='text-sm text-gray-400'>
-                                Subscribe to our newsletter to get latest fintech updates.
-                            </p>
-                            <label className="text-sm">
-                                <input type="checkbox" required /> I agree to the{" "}
-                                <span  className="capitalize">
-                                    Terms & Conditions
-                                </span>
-                            </label>
-                        </div>
+                {/* Footer Links */}
+                <div className="py-4">
+                    <h2 className="text-lg font-semibold mb-2">Pages</h2>
+                    <ul className="space-y-1">
+                        {footerLinks.map(({ name, path }) => (
+                            <li key={path}>
+                                <NavLink to={path} className="capitalize hover:underline">{name}</NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                
+                <div className="py-4">
+                    <h2 className="text-lg font-semibold mb-2 capitalize">product</h2>
+                    <ul className="space-y-1">
+                        {product.map(({ name, path }) => (
+                            <li key={path}>
+                                <NavLink to={path} className="capitalize hover:underline">{name}</NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
+                {/* Contact & Newsletter */}
+                <div className="py-4">
+                    <h2 className="text-lg font-semibold mb-2">Get In Touch</h2>
+                    <ul className="space-y-2 text-sm text-[#CDCDCD]">
+                        {contactInfo.map(({ icon, label, value }) => (
+                            <li key={label} className="flex gap-2 items-start">
+                                <span className="text-white flex gap-1 items-center">{icon} {label}:</span> <span>{value}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="mt-6 space-y-2">
+                        <h2 className="text-xl font-semibold">Stay Updated</h2>
+                        <p className="text-sm text-gray-400">Subscribe to get the latest fintech updates.</p>
+                        <label className="text-sm flex gap-2 items-center">
+                            <input type="checkbox" required />
+                            I agree to the <span className="underline">Terms & Conditions</span>
+                        </label>
 
                         <div className="flex flex-col sm:flex-row gap-2">
                             <input
@@ -95,36 +120,26 @@ const Footer = () => {
                                 placeholder="Enter your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="p-2 text-white  w-full outline-none  border border-white"
+                                className="p-2 w-full text-white bg-transparent border border-white outline-none"
                             />
                             <button
                                 onClick={handleSubscribe}
-                                className="border bg-blue-700 text-white px-4 py-2 "
+                                className="bg-blue-700 px-4 py-2 text-white"
                             >
                                 Subscribe
                             </button>
                         </div>
                     </div>
-
-                    {/* 👇 Extra Column for Newsletter */}
-                    
                 </div>
+            </div>
 
-                <div className="flex items-center px-10 py-3 justify-between text-gray-400 border-t border-[#777676] gap-2 text-[14.4px]">
-                    <p className="flex">© 2025 &nbsp; <span className='text-gray-200'> Mpluse Fintech Private Limited </span>. All rights reserved.</p>
-                    <div className='flex '>
-                        <NavLink to="/disclaimer" className="text-gray-400 hover:text-white text-sm capitalize">
-                            disclaimer   
-                        </NavLink>
-                        {/* <NavLink to="/terms-and-conditions" target='' className="text-gray-400 hover:text-white text-sm"> &nbsp;Terms & Conditions</NavLink> */}
-                    </div>
-                    
-                </div>
-            </footer>
-        </section>
+            {/* Bottom Bar */}
+            <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-3 border-t border-[#777676] text-gray-400 text-sm">
+                <p>© 2025 <span className="text-gray-200">Mpluse Fintech Pvt Ltd</span>. All rights reserved.</p>
+                <NavLink to="/disclaimer" className="hover:text-white mt-2 sm:mt-0">Disclaimer</NavLink>
+            </div>
+        </footer>
     );
 };
 
 export default Footer;
-
-// Privacy Policy |

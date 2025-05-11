@@ -14,7 +14,7 @@ import PAN_Verification from "./pages/PAN_Verification";
 import ErrorPage from "./components/layout/ErrorPage";
 import Banking_Service from "./pages/Banking_Service";
 import KYC_Onboarding from "./pages/KYC_Onboarding";
-import Upi from "./components/Project/UPI_Payment_Solution/Upi";
+import UPI_Payment_Solution from "./pages/UPI_Payment_Solution";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },  
       {
         path: "/product/UPI-payment-solution",
-        element: <Upi />
+        element: <UPI_Payment_Solution />
       },
       {
         path: "/product/kyc-onboarding",

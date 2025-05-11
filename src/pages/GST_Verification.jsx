@@ -28,7 +28,7 @@ const GST_Verification = () => {
                 imageSrc={gst}
                 imageAlt="Mpluse Debit Card"
                 onButtonClick={() => console.log('Button clicked')}
-                sectionBackGroundColor='text-white bg-gradient-to-br from-[#0b122d] to-[#0b163d] h-screen lg:h-[80vh]'
+                sectionBackGroundColor='text-white bg-gradient-to-l from-[#0A1A31] to-[#0B1A32] h-screen lg:h-[80vh]'
                 companyLogo="hidden"
             />
             <GstBenefits

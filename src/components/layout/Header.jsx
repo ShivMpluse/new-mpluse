@@ -40,7 +40,7 @@ function Header() {
                 { name: 'GST verification', path: '/product/GST-verification' },
                 { name: 'PAN verification', path: '/product/PAN-verification' },
                 { name: 'Banking Service', path: '/product/Banking-service' },
-                { name: 'KYC Onboarding', path: '/product/kyc-onboarding' },
+                { name: 'KYC & Onboarding', path: '/product/kyc-onboarding' },
                 { name: 'UPI Payment Solution', path: '/product/UPI-payment-solution' },
                 { name: 'Product 6', path: '/product/product6' },
                 { name: 'Product 7', path: '/product/product7' },
@@ -61,7 +61,10 @@ function Header() {
                 
                 {/* Logo */}
                 <div>
-                    <img src={scrolled ? logoLight : logoDark} alt="Mpluse" className='h-11 w-full' />
+                    <NavLink to="/">
+                        <img src={scrolled ? logoLight : logoDark} alt="Mpluse" className='h-11 w-full' />
+                    </NavLink>
+                        
                 </div>
 
                 {/* Desktop Navigation */}

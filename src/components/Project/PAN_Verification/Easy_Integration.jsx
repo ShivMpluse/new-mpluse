@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import api from '/image/API-integration.png'
+import api from '/image/api-integration.png'
 import Button from "../../UI/Button";
 
 const features = [

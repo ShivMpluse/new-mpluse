@@ -37,6 +37,9 @@ const UPI_Payment_Solution = () => {
             <FAQ />
             <Instantly 
                 mainHeading="Start Accepting UPI Payments Now!"
+                description="Join hundreds of businesses that trust Mpluse for secure, accurate, and lightning-fast document verification."
+                btn1="get started today"           
+                btn2="schedule demo"
             />
         </>
     )

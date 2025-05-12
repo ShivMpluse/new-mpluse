@@ -71,6 +71,9 @@ const GST_Verification = () => {
             />
             <Instantly 
                 mainHeading="Verify GST Numbers Instantly!"
+                description="Join hundreds of businesses that trust Mpluse for secure, accurate, and lightning-fast document verification."
+                btn1="get started today"           
+                btn2="schedule demo"
             />
         </>
         

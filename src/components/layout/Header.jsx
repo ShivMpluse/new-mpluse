@@ -42,7 +42,7 @@ function Header() {
                 { name: 'Banking Service', path: '/product/Banking-service' },
                 { name: 'KYC & Onboarding', path: '/product/kyc-onboarding' },
                 { name: 'UPI Payment Solution', path: '/product/UPI-payment-solution' },
-                { name: 'Product 6', path: '/product/product6' },
+                { name: 'OCR Verification', path: '/product/ocr-verification' },
                 { name: 'Product 7', path: '/product/product7' },
                 { name: 'Product 8', path: '/product/product8' },
                 { name: 'Product 9', path: '/product/product9' },

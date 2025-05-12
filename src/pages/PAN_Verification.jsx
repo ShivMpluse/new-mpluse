@@ -52,6 +52,9 @@ const PAN_Verification = () => {
             <FAQ />
             <Instantly 
                 mainHeading="Start Verifying PAN Cards Now!"
+                description="Join hundreds of businesses that trust Mpluse for secure, accurate, and lightning-fast document verification."
+                btn1="get started today"           
+                btn2="schedule demo"
             />
         </>
     )

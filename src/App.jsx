@@ -15,6 +15,7 @@ import ErrorPage from "./components/layout/ErrorPage";
 import Banking_Service from "./pages/Banking_Service";
 import KYC_Onboarding from "./pages/KYC_Onboarding";
 import UPI_Payment_Solution from "./pages/UPI_Payment_Solution";
+import OCR_Verification from "./pages/OCR_Verification";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/product/kyc-onboarding",
         element: <KYC_Onboarding />
+      },
+      {
+        path: "/product/ocr-verification",
+        element: <OCR_Verification />
       },
 
       {

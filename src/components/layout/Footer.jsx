@@ -50,6 +50,7 @@ const Footer = () => {
         { name: 'Banking Service', path: '/product/Banking-service' },
         { name: 'KYC & Onboarding', path: '/product/kyc-onboarding' },
         { name: 'UPI Payment Solution', path: '/product/UPI-payment-solution' },
+        { name: 'OCR Verification', path: '/product/ocr-verification' },
     ]
 
     return (

@@ -8,10 +8,14 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     const [email, setEmail] = useState("");
+    const [agreed, setAgreed] = useState(false);
 
     const handleSubscribe = () => {
-        alert(`Thanks for subscribing: ${email}`);
-        setEmail("");
+        if (agreed && email.trim() !== "") {
+            alert(`Thanks for subscribing: ${email}`);
+            setEmail("");
+            setAgreed(false);
+        }
     };
 
     const footerLinks = [
@@ -56,7 +60,6 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 max-w-[1200px] mx-auto">
-                {/* Logo & Description */}
                 <div>
                     <NavLink to='/'>
                         <img src={logo} alt="mpluse" className="h-18 w-33 object-contain" />
@@ -73,7 +76,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Footer Links */}
                 <div className="py-4">
                     <h2 className="text-lg font-semibold mb-2">Pages</h2>
                     <ul className="space-y-1">
@@ -84,7 +86,7 @@ const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                
+
                 <div className="py-4">
                     <h2 className="text-lg font-semibold mb-2 capitalize">product</h2>
                     <ul className="space-y-1">
@@ -96,7 +98,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact & Newsletter */}
                 <div className="py-4">
                     <h2 className="text-lg font-semibold mb-2">Get In Touch</h2>
                     <ul className="space-y-2 text-sm text-[#CDCDCD]">
@@ -111,7 +112,11 @@ const Footer = () => {
                         <h2 className="text-xl font-semibold">Stay Updated</h2>
                         <p className="text-sm text-gray-400">Subscribe to get the latest fintech updates.</p>
                         <label className="text-sm flex gap-2 items-center">
-                            <input type="checkbox" required />
+                            <input
+                                type="checkbox"
+                                checked={agreed}
+                                onChange={(e) => setAgreed(e.target.checked)}
+                            />
                             I agree to the <span className="underline">Terms & Conditions</span>
                         </label>
 
@@ -125,7 +130,12 @@ const Footer = () => {
                             />
                             <button
                                 onClick={handleSubscribe}
-                                className="bg-blue-700 px-4 py-2 text-white"
+                                disabled={!agreed || email.trim() === ""}
+                                className={`px-4 py-2 text-white transition-all ${
+                                    (!agreed || email.trim() === "")
+                                        ? 'bg-gray-500 cursor-not-allowed'
+                                        : 'bg-blue-700 hover:bg-blue-800'
+                                }`}
                             >
                                 Subscribe
                             </button>
@@ -134,7 +144,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-3 border-t border-[#777676] text-gray-400 text-sm">
                 <p>© 2025 <span className="text-gray-200">Mpluse Fintech Pvt Ltd</span>. All rights reserved.</p>
                 <NavLink to="/disclaimer" className="hover:text-white mt-2 sm:mt-0">Disclaimer</NavLink>

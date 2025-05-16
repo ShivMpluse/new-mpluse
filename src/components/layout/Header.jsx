@@ -64,7 +64,6 @@ function Header() {
                     <NavLink to="/">
                         <img src={scrolled ? logoLight : logoDark} alt="Mpluse" className='h-11 w-full' />
                     </NavLink>
-                        
                 </div>
 
                 {/* Desktop Navigation */}
@@ -82,8 +81,12 @@ function Header() {
                                 >
                                     {name}
                                 </NavLink>
+
+                                {/* Megamenu with Animation */}
                                 {subMenu && (
-                                    <ul className="p-4 absolute top-full opacity-90 left-[-700px] text-white bg-gray-800 shadow-md rounded hidden group-hover:grid grid-cols-3 gap-6 min-w-[1000px]">
+                                    <ul className="absolute top-full left-[-700px] bg-gray-800 text-white shadow-md rounded grid-cols-3 gap-6 min-w-[1000px] p-4 
+                                        grid transition-all duration-300 ease-in-out transform opacity-0 scale-95 pointer-events-none 
+                                        group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto group-hover:translate-y-1 z-50">
                                         {subMenu.map((item) => (
                                             <li key={item.name} className='p-6'>
                                                 <NavLink
